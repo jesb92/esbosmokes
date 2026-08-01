@@ -57,6 +57,28 @@
   ],
   "nades": [
     {
+      "id": "cache-toxico-cheaven-smoke",
+      "title": "Smoke Heaven B",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Toxico",
+      "target": "Heaven",
+      "difficulty": "fácil",
+      "throw": "",
+      "movement": "",
+      "precision": "media",
+      "setpos": "",
+      "videoUrl": "",
+      "thumbnail": "assets/maps/mapas/cache",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
       "id": "mirage-tspawn-window-smoke",
       "title": "Smoke de ventana desde T SpawnXXX",
       "map": "mirage",

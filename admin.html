@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Editor de mapas y lineups de EsboSmokes.">
+  <title>Editor de contenido · EsboSmokes</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Administración estática</span>
+        <h1>Editor de contenido</h1>
+        <p class="lead">Gestiona mapas y lineups desde el navegador. Después exporta <span class="kbd">nades.json</span> y súbelo a GitHub.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="help-box">
+          Este editor no puede escribir directamente en tu repositorio. Cuando termines, pulsa <strong>Exportar JSON</strong> y reemplaza <span class="kbd">data/nades.json</span> en GitHub.
+        </div>
+
+        <section class="admin-map-panel">
+          <div class="section-head">
+            <div><span class="eyebrow">Portada</span><h2>Gestionar mapas</h2></div>
+            <p>Cada mapa crea automáticamente una tarjeta en la página principal.</p>
+          </div>
+          <div class="map-admin-grid">
+            <form class="admin-form" data-map-form>
+              <h3 data-map-form-title>Nuevo mapa</h3>
+              <div class="form-grid" style="margin-top:16px">
+                <div class="form-field"><label for="map-name">Nombre *</label><input class="input" id="map-name" name="mapName" required placeholder="Dust 2"></div>
+                <div class="form-field"><label for="map-slug">Slug *</label><input class="input" id="map-slug" name="mapSlug" required placeholder="dust2"><small class="form-help">Sin espacios, mayúsculas ni tildes.</small></div>
+                <div class="form-field full"><label for="map-image">Imagen *</label><input class="input" id="map-image" name="mapImage" required placeholder="assets/maps/dust2.svg"></div>
+                <div class="form-field full"><label for="map-description">Descripción</label><textarea id="map-description" name="mapDescription" rows="3" placeholder="Utilidad para largo, medio y B."></textarea></div>
+              </div>
+              <div class="admin-actions">
+                <button class="btn btn-primary" type="submit" data-map-save-label>Añadir mapa</button>
+                <button class="btn" type="button" data-map-reset>Limpiar</button>
+              </div>
+            </form>
+            <section class="admin-list">
+              <div class="section-head"><div><h3>Tarjetas de mapas</h3><p data-map-count>0 mapas</p></div></div>
+              <div class="admin-items compact" data-map-items></div>
+            </section>
+          </div>
+        </section>
+
+        <div class="section-head admin-lineup-heading">
+          <div><span class="eyebrow">Tutoriales</span><h2>Gestionar lineups</h2></div>
+        </div>
+        <div class="admin-layout">
+          <form class="admin-form" data-nade-form>
+            <div class="section-head"><h3 data-form-title>Nueva lineup</h3></div>
+            <div class="form-grid">
+              <div class="form-field full"><label for="title">Título *</label><input class="input" id="title" name="title" required placeholder="Smoke de ventana desde T Spawn"></div>
+              <div class="form-field"><label for="id">ID único</label><input class="input" id="id" name="id" placeholder="Se genera automáticamente"></div>
+              <div class="form-field"><label for="map">Mapa *</label><select id="map" name="map" required></select></div>
+              <div class="form-field"><label for="type">Granada</label><select id="type" name="type"><option value="smoke">Smoke</option><option value="molotov">Molotov</option><option value="flash">Flash</option><option value="he">HE</option></select></div>
+              <div class="form-field"><label for="team">Equipo</label><select id="team" name="team"><option value="T">T</option><option value="CT">CT</option><option value="Ambos">Ambos</option></select></div>
+              <div class="form-field"><label for="origin">Origen *</label><input class="input" id="origin" name="origin" required placeholder="T Spawn"></div>
+              <div class="form-field"><label for="target">Destino *</label><input class="input" id="target" name="target" required placeholder="Ventana"></div>
+              <div class="form-field"><label for="difficulty">Dificultad</label><select id="difficulty" name="difficulty"><option value="fácil">Fácil</option><option value="media">Media</option><option value="difícil">Difícil</option></select></div>
+              <div class="form-field"><label for="throw">Lanzamiento</label><input class="input" id="throw" name="throw" placeholder="jumpthrow"></div>
+              <div class="form-field"><label for="movement">Movimiento</label><input class="input" id="movement" name="movement" placeholder="quieto"></div>
+              <div class="form-field"><label for="precision">Precisión</label><select id="precision" name="precision"><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option></select></div>
+              <div class="form-field full"><label for="videoUrl">Vídeo: MP4, WebM o YouTube</label><input class="input" id="videoUrl" name="videoUrl" type="text" placeholder="assets/videos/mi-video.mp4 o https://youtu.be/..."><small class="form-help">Para MP4, añade primero el archivo a <strong>assets/videos/</strong> en el repositorio.</small></div>
+              <div class="form-field full"><label for="thumbnail">Miniatura</label><input class="input" id="thumbnail" name="thumbnail" placeholder="assets/maps/mirage.svg"></div>
+              <div class="form-field full"><label for="setpos">Comando setpos</label><input class="input" id="setpos" name="setpos" placeholder="setpos ...; setang ..."></div>
+              <div class="form-field full"><label for="description">Descripción</label><textarea id="description" name="description" rows="3" placeholder="Qué cubre y cuándo utilizarla."></textarea></div>
+              <div class="form-field full"><label for="steps">Pasos, uno por línea</label><textarea id="steps" name="steps" rows="5" placeholder="Colócate en la esquina…&#10;Apunta al punto…&#10;Realiza el lanzamiento…"></textarea></div>
+              <div class="form-field full"><label for="tags">Etiquetas separadas por comas</label><input class="input" id="tags" name="tags" placeholder="mid, window, execute"></div>
+              <div class="form-field"><label><input type="checkbox" name="featured"> Destacada</label></div>
+              <div class="form-field"><label><input type="checkbox" name="published" checked> Publicada</label></div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn btn-primary" type="submit" data-save-label>Añadir lineup</button>
+              <button class="btn" type="button" data-reset-form>Limpiar</button>
+            </div>
+          </form>
+
+          <section class="admin-list">
+            <div class="section-head">
+              <div><h3>Contenido</h3><p data-admin-count>0 entradas</p></div>
+              <label class="btn" for="import-json">Importar JSON</label>
+              <input id="import-json" data-import-json type="file" accept="application/json" hidden>
+            </div>
+            <input class="input" data-admin-search type="search" placeholder="Buscar entradas…" style="margin-bottom:14px">
+            <div class="admin-items" data-admin-items></div>
+            <div class="admin-actions">
+              <button class="btn btn-primary" data-export-json type="button">Exportar JSON</button>
+            </div>
+            <p class="admin-status" data-admin-status>Contenido cargado desde data/nades.json.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

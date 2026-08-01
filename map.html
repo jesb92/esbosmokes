@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Filtra lineups de CS2 por granada, equipo y dificultad.">
+  <title>Mapa · EsboSmokes</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-head">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Mapa</span>
+          <h1 data-map-name>Mapa</h1>
+          <p class="lead" data-map-description></p>
+        </div>
+        <div class="hero-card"><img data-map-image src="" alt=""></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filters">
+          <input class="input" data-search type="search" placeholder="Buscar origen, destino o etiqueta…" aria-label="Buscar lineups">
+          <select data-type aria-label="Tipo de granada"><option value="">Todas las granadas</option><option value="smoke">Smoke</option><option value="molotov">Molotov</option><option value="flash">Flash</option><option value="he">HE</option></select>
+          <select data-team aria-label="Equipo"><option value="">Ambos equipos</option><option value="T">T</option><option value="CT">CT</option></select>
+          <select data-difficulty aria-label="Dificultad"><option value="">Toda dificultad</option><option value="fácil">Fácil</option><option value="media">Media</option><option value="difícil">Difícil</option></select>
+        </div>
+        <div class="section-head"><h2>Lineups</h2><span data-result-count></span></div>
+        <div class="grid nade-grid" data-nade-grid></div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="js/common.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

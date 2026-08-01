@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Biblioteca de lineups y granadas de Counter-Strike 2.">
+  <title>EsboSmokes · Granadas de CS2</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Biblioteca de granadas de CS2</span>
+          <h1>Encuentra la utilidad correcta. Más rápido.</h1>
+          <p class="lead">Organiza smokes, molotovs, flashes y HE por mapa, posición y dificultad. Sin cuentas, sin base de datos y fácil de mantener.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#maps">Explorar mapas</a>
+            <a class="btn btn-ghost" href="admin.html">Abrir editor</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/maps/mirage.svg" alt="Vista estilizada de Mirage">
+          <div class="stat-row">
+            <div class="stat"><strong data-total-nades>—</strong><span>Lineups</span></div>
+            <div class="stat"><strong data-total-maps>—</strong><span>Mapas</span></div>
+            <div class="stat"><strong data-total-featured>—</strong><span>Destacadas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="maps">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Mapas</span><h2>Elige dónde practicar</h2></div>
+          <p>Los contadores se calculan automáticamente desde el JSON.</p>
+        </div>
+        <div class="grid map-grid" data-map-grid></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Selección</span><h2>Lineups destacadas</h2></div>
+        </div>
+        <div class="grid nade-grid" data-featured-grid></div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -142,8 +142,8 @@ function renderFooter() {
   document.querySelector('[data-site-footer]').innerHTML = `
     <footer class="footer">
       <div class="container footer-row">
-        <span>EsboSmokes · Proyecto estático para GitHub Pages</span>
-        <span>No afiliado con Valve ni con CSNADES.gg</span>
+        <span>EsboSmokes</span>
+        <span>Humos oficiales de Colegio Labor</span>
       </div>
     </footer>`;
 }

@@ -57,6 +57,28 @@
   ],
   "nades": [
     {
+      "id": "cache-conector-boost-molotov",
+      "title": "Molo Bosst Medio",
+      "map": "cache",
+      "type": "molotov",
+      "team": "CT",
+      "origin": "Conector",
+      "target": "Boost",
+      "difficulty": "difícil",
+      "throw": "Jumpthrow",
+      "movement": "Pulsando A",
+      "precision": "alta",
+      "setpos": "",
+      "videoUrl": "assets/videos/maps/cache/molo.mp4",
+      "thumbnail": "assets/maps/cache.png",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
       "id": "cache-toxico-cheaven-smoke",
       "title": "Smoke Heaven B",
       "map": "cache",

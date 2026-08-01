@@ -47,6 +47,12 @@
       "name": "Overpass",
       "image": "assets/maps/overpass.png",
       "description": "Lineups para baños, conector, monster y control de A."
+    },
+    {
+      "slug": "cache",
+      "name": "Cache",
+      "image": "assets/maps/cache.png",
+      "description": "Lineups para mid, conector y control de A-B."
     }
   ],
   "nades": [

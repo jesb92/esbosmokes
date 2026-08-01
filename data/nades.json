@@ -69,7 +69,7 @@
       "movement": "",
       "precision": "media",
       "setpos": "",
-      "videoUrl": "",
+      "videoUrl": "assets/videos/maps/cache/ct.mp4",
       "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],

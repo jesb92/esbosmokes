@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Ilustración original de ANUBIS">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c58b42"/><stop offset="1" stop-color="#253d3b"/></linearGradient></defs>
+  <rect width="900" height="560" fill="url(#g)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="18">
+    <path d="M95 420 205 165 380 225 485 110 730 170 805 395 615 470 455 360 300 470Z"/>
+    <path d="M210 165 300 300 455 360 615 255 730 170"/>
+    <circle cx="300" cy="300" r="54"/><circle cx="615" cy="255" r="54"/>
+  </g>
+  <text x="54" y="86" fill="#fff" font-family="Arial,sans-serif" font-size="54" font-weight="800" letter-spacing="4">ANUBIS</text>
+  <text x="58" y="128" fill="#fff" fill-opacity=".72" font-family="Arial,sans-serif" font-size="22">ESBOSMOKES · MAPA DE EJEMPLO</text>
+</svg>

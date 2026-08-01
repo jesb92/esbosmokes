@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-labelledby="title desc">
+  <title id="title">EsboSmokes</title>
+  <desc id="desc">Logotipo con una granada estilizada</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc857"/>
+      <stop offset="1" stop-color="#ff9418"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="url(#g)"/>
+  <path d="M25 19h18l4 8v21H20V27l5-8Z" fill="#101216"/>
+  <path d="M29 14h15v8H29z" fill="#101216"/>
+  <path d="M43 14c8-5 13 1 11 6" fill="none" stroke="#101216" stroke-width="4" stroke-linecap="round"/>
+  <path d="M25 31h17M25 38h17" stroke="#ffc857" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+  <text x="78" y="42" fill="#f5f7fa" font-family="Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-.8">EsboSmokes</text>
+</svg>

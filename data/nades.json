@@ -9,43 +9,43 @@
     {
       "slug": "mirage",
       "name": "Mirage",
-      "image": "assets/maps/mirage.svg",
+      "image": "assets/maps/mirage.png",
       "description": "Lineups esenciales para controlar medio, A y B."
     },
     {
       "slug": "inferno",
       "name": "Inferno",
-      "image": "assets/maps/inferno.svg",
+      "image": "assets/maps/inferno.png",
       "description": "Utilidad para banana, medio y entradas a los sites."
     },
     {
       "slug": "ancient",
       "name": "Ancient",
-      "image": "assets/maps/ancient.svg",
+      "image": "assets/maps/ancient.png",
       "description": "Granadas para medio, donut y ejecuciones coordinadas."
     },
     {
       "slug": "nuke",
       "name": "Nuke",
-      "image": "assets/maps/nuke.svg",
+      "image": "assets/maps/nuke.png",
       "description": "Smokes exteriores, flashes y utilidad de interiores."
     },
     {
       "slug": "dust2",
       "name": "Dust 2",
-      "image": "assets/maps/dust2.svg",
+      "image": "assets/maps/dust2.png",
       "description": "Smokes, flashes y molotovs para largo, medio y entradas a B."
     },
     {
       "slug": "anubis",
       "name": "Anubis",
-      "image": "assets/maps/anubis.svg",
+      "image": "assets/maps/anubis.png",
       "description": "Utilidad para canal, medio y ejecuciones en ambos sites."
     },
     {
       "slug": "overpass",
       "name": "Overpass",
-      "image": "assets/maps/overpass.svg",
+      "image": "assets/maps/overpass.png",
       "description": "Lineups para baños, conector, monster y control de A."
     }
   ],
@@ -64,7 +64,7 @@
       "precision": "alta",
       "setpos": "setpos 1296 -352 -104; setang -20.2 -145.4 0",
       "videoUrl": "assets/videos/video-prueba-lineup.mp4",
-      "thumbnail": "assets/maps/mirage.svg",
+      "thumbnail": "assets/maps/mirage.png",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [
         "Colócate pegado a la esquina marcada en T Spawn.",
@@ -94,7 +94,7 @@
       "precision": "alta",
       "setpos": "setpos 430 -820 -160; setang -16.4 42.1 0",
       "videoUrl": "",
-      "thumbnail": "assets/maps/mirage.svg",
+      "thumbnail": "assets/maps/mirage.png",
       "description": "Aísla conector para permitir una subida más segura por medio.",
       "steps": [
         "Busca la esquina de cajas en Top Mid.",
@@ -123,7 +123,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/mirage.svg",
+      "thumbnail": "assets/maps/mirage.png",
       "description": "Limpia la posición bajo balcón durante una entrada a A.",
       "steps": [
         "Asómate lo mínimo desde Palace.",
@@ -152,7 +152,7 @@
       "precision": "alta",
       "setpos": "setpos -1490 680 64; setang -18.0 35.0 0",
       "videoUrl": "",
-      "thumbnail": "assets/maps/inferno.svg",
+      "thumbnail": "assets/maps/inferno.png",
       "description": "Corta la rotación y la visión desde CT durante una ejecución de B.",
       "steps": [
         "Pégate al barril de T Ramp.",
@@ -182,7 +182,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/inferno.svg",
+      "thumbnail": "assets/maps/inferno.png",
       "description": "Bloquea coffins para reducir los ángulos defensivos en B.",
       "steps": [
         "Colócate en la esquina de la pared de Banana.",
@@ -211,7 +211,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/inferno.svg",
+      "thumbnail": "assets/maps/inferno.png",
       "description": "Detona sobre medio con poco tiempo de reacción para los defensores.",
       "steps": [
         "Alinea el hombro con la pared.",
@@ -240,7 +240,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/ancient.svg",
+      "thumbnail": "assets/maps/ancient.png",
       "description": "Permite cruzar y disputar el control de medio con menos exposición.",
       "steps": [
         "Pégate a la piedra de referencia.",
@@ -269,7 +269,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/ancient.svg",
+      "thumbnail": "assets/maps/ancient.png",
       "description": "Expulsa al defensor de donut antes de tomar medio.",
       "steps": [
         "Párate junto a la caja de cubby.",
@@ -298,7 +298,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/ancient.svg",
+      "thumbnail": "assets/maps/ancient.png",
       "description": "Daño temprano contra rivales agrupados en la entrada de B.",
       "steps": [
         "Sitúate detrás de la cobertura de cave.",
@@ -327,7 +327,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/nuke.svg",
+      "thumbnail": "assets/maps/nuke.png",
       "description": "Primera pieza de una pared de smokes para cruzar exterior.",
       "steps": [
         "Colócate en la línea de salida marcada.",
@@ -357,7 +357,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/nuke.svg",
+      "thumbnail": "assets/maps/nuke.png",
       "description": "Flash rápida para apoyar una entrada por hut.",
       "steps": [
         "Acércate a la puerta de lobby.",
@@ -387,7 +387,7 @@
       "precision": "media",
       "setpos": "",
       "videoUrl": "",
-      "thumbnail": "assets/maps/nuke.svg",
+      "thumbnail": "assets/maps/nuke.png",
       "description": "Fuerza al defensor de ramp a abandonar la posición o recibir daño.",
       "steps": [
         "Colócate junto al marco de radio.",

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#222935"/><stop offset="1" stop-color="#0c0e12"/></linearGradient></defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <circle cx="1040" cy="135" r="190" fill="#f3c969" opacity=".15"/>
-  <path d="M170 520h940M250 430h760M360 340h540" stroke="#f3c969" stroke-width="12" opacity=".55"/>
-  <text x="90" y="180" fill="#f3c969" font-family="Arial" font-weight="700" font-size="38">ESBOSMOKES · EXECUTE</text>
-  <text x="90" y="285" fill="#fff" font-family="Arial" font-weight="900" font-size="92">MIRAGE A</text>
-  <text x="94" y="355" fill="#a6afbd" font-family="Arial" font-size="34">Tarjeta de ejemplo</text>
-</svg>

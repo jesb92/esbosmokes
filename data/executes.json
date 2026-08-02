@@ -1,9 +1,23 @@
 {
+  "maps": [
+    {
+      "slug": "mirage",
+      "name": "Mirage",
+      "image": "assets/executes/mirage-a-cover.svg",
+      "description": "Executes coordinados para Mirage."
+    },
+    {
+      "slug": "dust2",
+      "name": "Dust 2",
+      "image": "assets/maps/cards/dust2.png",
+      "description": ""
+    }
+  ],
   "executes": [
     {
       "id": "mirage-a-execute",
       "title": "Execute de A en Mirage",
-      "map": "Mirage",
+      "map": "mirage",
       "site": "A",
       "difficulty": "media",
       "thumbnail": "assets/executes/mirage-a-cover.svg",

@@ -130,6 +130,7 @@ function renderHeader(active = '') {
         <a class="brand" href="index.html"><img src="assets/logo.svg" alt="EsboSmokes"></a>
         <nav class="nav-links" aria-label="Principal">
           <a class="${active === 'maps' ? 'active' : ''}" href="index.html#maps">Mapas</a>
+          <a class="${active === 'execute' ? 'active' : ''}" href="execute.html#execute">Execute</a>
           <a class="${active === 'favorites' ? 'active' : ''}" href="favorites.html">Favoritos <span class="badge-count" data-favorites-count>0</span></a>
           <a class="${active === 'admin' ? 'active' : ''}" href="admin.html">Editor</a>
         </nav>

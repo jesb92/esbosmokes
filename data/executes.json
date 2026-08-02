@@ -22,7 +22,9 @@
       "difficulty": "media",
       "thumbnail": "assets/executes/mirage/midtoa.jpg",
       "videoUrl": "",
-      "gallery": [],
+      "gallery": [
+        "assets/executes/mirage/midtoa.jpg"
+      ],
       "description": "",
       "steps": [],
       "tags": [],

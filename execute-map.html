@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tarjetas Execute por mapa en EsboSmokes.">
+  <title>Mapa Execute · EsboSmokes</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/execute.css">
+</head>
+<body>
+  <div data-site-header></div>
+
+  <main>
+    <section class="page-head execute-map-head">
+      <div class="container">
+        <a class="back-link" href="execute.html">← Volver a Execute</a>
+        <span class="eyebrow">Mapa Execute</span>
+        <h1 data-execute-map-title>Cargando…</h1>
+        <p class="lead" data-execute-map-description></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Tarjetas</span>
+            <h2>Executes disponibles</h2>
+          </div>
+          <p data-execute-map-count></p>
+        </div>
+        <div class="grid map-grid" data-execute-grid></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="js/common.js"></script>
+  <script src="js/execute-map.js"></script>
+</body>
+</html>

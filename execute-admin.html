@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Editor de tarjetas Execute de EsboSmokes.">
-  <title>Editor de tarjetas Execute · EsboSmokes</title>
+  <meta name="description" content="Editor de mapas y tarjetas Execute de EsboSmokes.">
+  <title>Editor Execute · EsboSmokes</title>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/execute.css">
@@ -16,23 +16,85 @@
     <section class="page-head">
       <div class="container">
         <span class="eyebrow">Administración estática</span>
-        <h1>Tarjetas de Execute</h1>
-        <p class="lead">Crea, edita y elimina tarjetas. Después exporta <span class="kbd">executes.json</span> y reemplaza <span class="kbd">data/executes.json</span>.</p>
+        <h1>Editor de Execute</h1>
+        <p class="lead">Gestiona mapas y tarjetas Execute. Después exporta <span class="kbd">executes.json</span> y reemplaza <span class="kbd">data/executes.json</span>.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="help-box">
-          <strong>Importante:</strong> el editor crea la tarjeta y guarda las rutas. Para publicar los archivos, copia las imágenes a <strong>assets/executes/</strong> y los vídeos a <strong>assets/videos/</strong> dentro de tu clon local.
+          Este editor no puede escribir directamente en GitHub. Cuando termines, exporta el JSON, reemplaza <strong>data/executes.json</strong> y sube también las imágenes y vídeos utilizados.
         </div>
 
         <div class="execute-admin-toolbar">
-          <button class="btn btn-primary" type="button" data-create-card>+ Nueva tarjeta</button>
           <a class="btn" href="execute.html">Ver Execute</a>
           <label class="btn" for="execute-import">Importar JSON</label>
           <input id="execute-import" data-execute-import type="file" accept="application/json" hidden>
-          <button class="btn" data-execute-export type="button">Exportar JSON</button>
+          <button class="btn btn-primary" data-execute-export type="button">Exportar executes.json</button>
+        </div>
+
+        <section class="admin-map-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Execute</span>
+              <h2>Gestionar mapas</h2>
+            </div>
+            <p>Cada mapa crea una tarjeta en la página Execute y aparece en el selector de tarjetas.</p>
+          </div>
+
+          <div class="map-admin-grid">
+            <form class="admin-form" data-execute-map-form>
+              <h3 data-execute-map-form-title>Nuevo mapa</h3>
+
+              <div class="form-grid" style="margin-top:16px">
+                <div class="form-field">
+                  <label for="execute-map-name">Nombre *</label>
+                  <input class="input" id="execute-map-name" name="mapName" required placeholder="Dust 2">
+                </div>
+
+                <div class="form-field">
+                  <label for="execute-map-slug">Slug *</label>
+                  <input class="input" id="execute-map-slug" name="mapSlug" required placeholder="dust2">
+                  <small class="form-help">Sin espacios, mayúsculas ni tildes.</small>
+                </div>
+
+                <div class="form-field full">
+                  <label for="execute-map-image">Imagen *</label>
+                  <input class="input" id="execute-map-image" name="mapImage" required placeholder="assets/maps/dust2.jpg">
+                  <small class="form-help">Copia la imagen a assets/maps/ y escribe aquí la ruta.</small>
+                </div>
+
+                <div class="form-field full">
+                  <label for="execute-map-description">Descripción</label>
+                  <textarea id="execute-map-description" name="mapDescription" rows="3" placeholder="Executes coordinados para A, B y medio."></textarea>
+                </div>
+              </div>
+
+              <div class="admin-actions">
+                <button class="btn btn-primary" type="submit" data-execute-map-save-label>Añadir mapa</button>
+                <button class="btn" type="button" data-execute-map-reset>Limpiar</button>
+              </div>
+            </form>
+
+            <section class="admin-list">
+              <div class="section-head">
+                <div>
+                  <h3>Tarjetas de mapas</h3>
+                  <p data-execute-map-count>0 mapas</p>
+                </div>
+              </div>
+              <div class="admin-items compact" data-execute-map-items></div>
+            </section>
+          </div>
+        </section>
+
+        <div class="section-head admin-lineup-heading">
+          <div>
+            <span class="eyebrow">Estrategias</span>
+            <h2>Gestionar tarjetas Execute</h2>
+          </div>
+          <button class="btn btn-primary" type="button" data-create-card>+ Nueva tarjeta</button>
         </div>
 
         <div class="admin-layout">
@@ -58,7 +120,8 @@
 
                 <div class="form-field">
                   <label for="execute-map">Mapa *</label>
-                  <input class="input" id="execute-map" name="map" required placeholder="Mirage">
+                  <select id="execute-map" name="map" required></select>
+                  <small class="form-help">Los mapas se crean en la sección superior.</small>
                 </div>
 
                 <div class="form-field">
@@ -86,7 +149,7 @@
                     <label class="btn" for="execute-thumbnail-file">Elegir portada del ordenador</label>
                     <input id="execute-thumbnail-file" data-thumbnail-file type="file" accept="image/*" hidden>
                   </div>
-                  <small class="form-help" data-thumbnail-file-help>El selector solo genera la ruta y la vista previa; después copia el archivo a assets/executes/.</small>
+                  <small class="form-help" data-thumbnail-file-help>El selector genera la ruta y la vista previa; después copia el archivo a assets/executes/.</small>
                 </div>
 
                 <div class="form-field full">

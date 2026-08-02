@@ -12,13 +12,16 @@
     const item = (data.executes || []).find(execute => execute.id === id && execute.published !== false);
     if (!item) throw new Error('El execute solicitado no existe o no está publicado.');
 
+    const map = (data.maps || []).find(entry => entry.slug === item.map);
+    const mapName = map?.name || item.map || 'CS2';
+
     document.title = `${item.title} · EsboSmokes`;
-    document.querySelector('[data-execute-breadcrumb]').textContent = `${item.map || 'CS2'}${item.site ? ` / Site ${item.site}` : ''}`;
+    document.querySelector('[data-execute-breadcrumb]').textContent = `${mapName}${item.site ? ` / Site ${item.site}` : ''}`;
     document.querySelector('[data-execute-title]').textContent = item.title;
     document.querySelector('[data-execute-description]').textContent = item.description || '';
 
     document.querySelector('[data-execute-meta]').innerHTML = [
-      item.map,
+      mapName,
       item.site ? `Site ${item.site}` : '',
       item.difficulty,
       ...(item.tags || [])
@@ -32,7 +35,7 @@
       : '<li>Contenido pendiente.</li>';
 
     document.querySelector('[data-execute-details]').innerHTML = [
-      ['Mapa', item.map || '—'],
+      ['Mapa', mapName],
       ['Zona', item.site || '—'],
       ['Dificultad', item.difficulty || '—'],
       ['Actualizado', item.createdAt || '—']

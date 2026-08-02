@@ -1,56 +1,64 @@
-# Instalar la pestaña Execute
+# Execute con mapas administrables
 
-Copia estos archivos y carpetas en la raíz de tu proyecto EsboSmokes:
+Esta actualización convierte Execute en una estructura igual a la portada principal:
+
+1. `execute.html` muestra tarjetas de mapas.
+2. Al pulsar un mapa se abre `execute-map.html?map=slug`.
+3. Esa página muestra las tarjetas Execute asignadas al mapa.
+4. Cada tarjeta abre su detalle con vídeo, fotos y pasos.
+5. `execute-admin.html` permite crear, editar y eliminar mapas y tarjetas.
+
+## Archivos que debes copiar o reemplazar
 
 - `execute.html`
+- `execute-map.html` (nuevo)
 - `execute-detail.html`
 - `execute-admin.html`
 - `js/execute.js`
+- `js/execute-map.js` (nuevo)
 - `js/execute-detail.js`
 - `js/execute-admin.js`
 - `css/execute.css`
-- `data/executes.json`
-- `assets/executes/`
 
-No reemplaces tus carpetas completas: fusiona el contenido.
+La carpeta también contiene un `data/executes.json` de ejemplo. Si ya tienes tarjetas propias, conserva una copia de tu JSON antes de reemplazarlo.
 
-## Añadir la pestaña al menú
+## Migrar tu JSON anterior
 
-Abre `js/common.js`. Dentro de `renderHeader()`, coloca esta línea entre Mapas y Favoritos:
+El nuevo editor acepta el formato anterior y lo convierte automáticamente:
 
-```javascript
-<a class="${active === 'execute' ? 'active' : ''}" href="execute.html">Execute</a>
-```
+1. Abre `execute-admin.html` con la web funcionando.
+2. Pulsa **Importar JSON**.
+3. Selecciona tu antiguo `executes.json`.
+4. El editor creará automáticamente los mapas que encuentre en tus tarjetas.
+5. Revisa las imágenes de los mapas.
+6. Pulsa **Exportar executes.json**.
+7. Reemplaza `data/executes.json` con el archivo descargado.
 
-El menú debe quedar parecido a:
+## Añadir un mapa
 
-```javascript
-<a class="${active === 'maps' ? 'active' : ''}" href="index.html#maps">Mapas</a>
-<a class="${active === 'execute' ? 'active' : ''}" href="execute.html">Execute</a>
-<a class="${active === 'favorites' ? 'active' : ''}" href="favorites.html">Favoritos <span class="badge-count" data-favorites-count>0</span></a>
-```
+En **Gestionar mapas** introduce:
 
-## Usar el editor
+- Nombre: `Dust 2`
+- Slug: `dust2`
+- Imagen: `assets/maps/dust2.jpg`
+- Descripción: el texto que aparecerá en la tarjeta
 
-Abre:
+Copia físicamente la imagen a `assets/maps/` y pulsa **Añadir mapa**.
 
-`execute-admin.html`
+## Añadir una tarjeta al mapa
 
-En GitHub Pages:
+En **Gestionar tarjetas Execute**:
 
-`https://TU-USUARIO.github.io/TU-REPOSITORIO/execute-admin.html`
+1. Selecciona el mapa en el desplegable.
+2. Añade título, portada, vídeo, fotos y pasos.
+3. Pulsa **Crear tarjeta**.
+4. Exporta el JSON al terminar.
 
-1. Copia la portada y las fotos a `assets/executes/`.
-2. Copia los vídeos MP4 a `assets/videos/`.
-3. Escribe las rutas en el editor.
-4. Pulsa `Exportar JSON`.
-5. Reemplaza `data/executes.json` por el archivo descargado.
-6. Haz commit y push.
+## Publicar en GitHub
 
-Ejemplos de rutas:
+Reemplaza `data/executes.json`, añade las imágenes y vídeos, y después usa GitHub Desktop:
 
-- Portada: `assets/executes/mirage-a-cover.jpg`
-- Vídeo: `assets/videos/mirage-a.mp4`
-- Foto adicional: `assets/executes/mirage-a-smoke-ct.jpg`
+1. Commit to main
+2. Push origin
 
-El editor no puede mover los archivos por sí solo; únicamente guarda sus rutas en el JSON.
+Los vídeos individuales deben pesar menos de 100 MiB para un repositorio Git normal.

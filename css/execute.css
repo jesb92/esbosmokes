@@ -112,3 +112,38 @@
     grid-column: 1 / -1;
   }
 }
+
+/* Navegación y gestor de mapas de Execute */
+.execute-map-head .back-link {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.execute-map-head .back-link:hover {
+  color: var(--accent);
+}
+
+/* Respaldo por si styles.css es una versión anterior. */
+.admin-map-panel {
+  margin-bottom: 54px;
+}
+
+.map-admin-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.admin-lineup-heading {
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .map-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}

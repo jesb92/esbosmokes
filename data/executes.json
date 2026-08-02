@@ -3,7 +3,7 @@
     {
       "slug": "mirage",
       "name": "Mirage",
-      "image": "assets/executes/mirage-a-cover.svg",
+      "image": "assets/maps/cards/ancient.png",
       "description": "Executes coordinados para Mirage."
     },
     {
@@ -14,6 +14,21 @@
     }
   ],
   "executes": [
+    {
+      "id": "mid-to-b",
+      "title": "Mid to B",
+      "map": "mirage",
+      "site": "Mid",
+      "difficulty": "media",
+      "thumbnail": "assets/executes/3333.png",
+      "videoUrl": "",
+      "gallery": [],
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "published": true,
+      "createdAt": "2026-08-02"
+    },
     {
       "id": "mirage-a-execute",
       "title": "Execute de A en Mirage",

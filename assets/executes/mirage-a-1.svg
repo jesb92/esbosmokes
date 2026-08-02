@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#15181e"/>
+  <circle cx="380" cy="410" r="175" fill="#f3c969" opacity=".18"/>
+  <path d="M175 620L380 410l215 110 260-270 240 115" fill="none" stroke="#f3c969" stroke-width="18"/>
+  <text x="80" y="120" fill="#fff" font-family="Arial" font-weight="800" font-size="64">REFERENCIA 1</text>
+  <text x="80" y="190" fill="#a6afbd" font-family="Arial" font-size="30">Sustituye esta imagen desde assets/executes/</text>
+</svg>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Editor de executes de EsboSmokes.">
+  <title>Editor de Execute · EsboSmokes</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/execute.css">
+</head>
+<body>
+  <div data-site-header></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Administración estática</span>
+        <h1>Editor de Execute</h1>
+        <p class="lead">Añade tarjetas, vídeos y fotografías. Después exporta <span class="kbd">executes.json</span> y reemplaza <span class="kbd">data/executes.json</span>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="help-box">
+          Copia primero las imágenes a <strong>assets/executes/</strong> y los vídeos a <strong>assets/videos/</strong>. El editor guarda las rutas, pero el navegador no puede copiar los archivos dentro del repositorio.
+        </div>
+
+        <div class="admin-layout">
+          <form class="admin-form" data-execute-form>
+            <div class="section-head">
+              <div><span class="eyebrow">Tarjeta y contenido</span><h3 data-execute-form-title>Nuevo execute</h3></div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-field full">
+                <label for="execute-title">Título *</label>
+                <input class="input" id="execute-title" name="title" required placeholder="Execute de A en Mirage">
+              </div>
+
+              <div class="form-field">
+                <label for="execute-id">ID único</label>
+                <input class="input" id="execute-id" name="id" placeholder="Se genera automáticamente">
+              </div>
+
+              <div class="form-field">
+                <label for="execute-map">Mapa *</label>
+                <input class="input" id="execute-map" name="map" required placeholder="Mirage">
+              </div>
+
+              <div class="form-field">
+                <label for="execute-site">Site o zona</label>
+                <input class="input" id="execute-site" name="site" placeholder="A">
+              </div>
+
+              <div class="form-field">
+                <label for="execute-difficulty">Dificultad</label>
+                <select id="execute-difficulty" name="difficulty">
+                  <option value="fácil">Fácil</option>
+                  <option value="media" selected>Media</option>
+                  <option value="difícil">Difícil</option>
+                </select>
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-thumbnail">Foto de portada *</label>
+                <input class="input" id="execute-thumbnail" name="thumbnail" required placeholder="assets/executes/mirage-a-cover.jpg">
+                <small class="form-help">Esta imagen aparece en la tarjeta.</small>
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-video">Vídeo MP4, WebM o YouTube</label>
+                <input class="input" id="execute-video" name="videoUrl" placeholder="assets/videos/mirage-a.mp4 o https://youtu.be/…">
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-gallery">Fotografías adicionales, una ruta por línea</label>
+                <textarea id="execute-gallery" name="gallery" rows="5" placeholder="assets/executes/mirage-a-1.jpg&#10;assets/executes/mirage-a-2.jpg"></textarea>
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-description">Descripción</label>
+                <textarea id="execute-description" name="description" rows="4" placeholder="Explica el objetivo del execute y cuándo usarlo."></textarea>
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-steps">Pasos, uno por línea</label>
+                <textarea id="execute-steps" name="steps" rows="6" placeholder="Jugador 1 lanza la smoke de CT.&#10;Jugador 2 lanza la flash sobre site.&#10;El equipo entra coordinado."></textarea>
+              </div>
+
+              <div class="form-field full">
+                <label for="execute-tags">Etiquetas separadas por comas</label>
+                <input class="input" id="execute-tags" name="tags" placeholder="A, smokes, flashes, full-buy">
+              </div>
+
+              <div class="form-field">
+                <label><input type="checkbox" name="published" checked> Publicado</label>
+              </div>
+            </div>
+
+            <div class="admin-actions">
+              <button class="btn btn-primary" type="submit" data-execute-save>Añadir execute</button>
+              <button class="btn" type="button" data-execute-reset>Limpiar</button>
+              <a class="btn" href="execute.html">Ver página</a>
+            </div>
+          </form>
+
+          <section class="admin-list">
+            <div class="section-head">
+              <div>
+                <h3>Executes</h3>
+                <p data-execute-count>0 entradas</p>
+              </div>
+              <label class="btn" for="execute-import">Importar JSON</label>
+              <input id="execute-import" data-execute-import type="file" accept="application/json" hidden>
+            </div>
+
+            <input class="input" data-execute-search type="search" placeholder="Buscar executes…" style="margin-bottom:14px">
+            <div class="admin-items" data-execute-items></div>
+
+            <div class="admin-actions">
+              <button class="btn btn-primary" data-execute-export type="button">Exportar JSON</button>
+            </div>
+            <p class="admin-status" data-execute-status>Contenido cargado desde data/executes.json.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+  <script src="js/common.js"></script>
+  <script src="js/execute-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "executes": [
+    {
+      "id": "mirage-a-execute",
+      "title": "Execute de A en Mirage",
+      "map": "Mirage",
+      "site": "A",
+      "difficulty": "media",
+      "thumbnail": "assets/executes/mirage-a-cover.svg",
+      "videoUrl": "assets/videos/video-prueba-lineup.mp4",
+      "gallery": [
+        "assets/executes/mirage-a-1.svg",
+        "assets/executes/mirage-a-2.svg"
+      ],
+      "description": "Ejemplo de entrada coordinada a A con smokes, flash y molotov.",
+      "steps": [
+        "El primer jugador lanza la smoke de CT.",
+        "El segundo jugador bloquea jungle o conector.",
+        "La flash detona sobre el site antes de la entrada.",
+        "El equipo entra junto y limpia las posiciones cercanas."
+      ],
+      "tags": [
+        "smokes",
+        "flash",
+        "entrada"
+      ],
+      "published": true,
+      "createdAt": "2026-08-02"
+    }
+  ]
+}

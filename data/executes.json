@@ -15,12 +15,12 @@
   ],
   "executes": [
     {
-      "id": "mid-to-b",
-      "title": "Mid to B",
+      "id": "mid-to-a",
+      "title": "Mid to A",
       "map": "mirage",
-      "site": "Mid",
+      "site": "T spawn > Mid > A",
       "difficulty": "media",
-      "thumbnail": "assets/executes/mirage/3333.jpg",
+      "thumbnail": "assets/executes/mirage/midtoA.jpg",
       "videoUrl": "",
       "gallery": [],
       "description": "",

@@ -79,9 +79,9 @@
       "createdAt": "2026-08-01"
     },
     {
-      "id": "mirage-coche-sandwich-smoke",
+      "id": "inferno-coche-sandwich-smoke",
       "title": "Molo Sandwich y Segundas",
-      "map": "mirage",
+      "map": "inferno",
       "type": "smoke",
       "team": "T",
       "origin": "Coche",

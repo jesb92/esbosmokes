@@ -1,5 +1,6 @@
 let executeData = { executes: [] };
 let editingExecuteId = null;
+let previewObjectUrl = null;
 
 (async () => {
   renderHeader('admin');
@@ -12,14 +13,24 @@ let editingExecuteId = null;
     validateExecuteData(executeData);
     renderExecuteList();
   } catch (error) {
-    document.querySelector('[data-execute-status]').textContent = `Error: ${error.message}`;
+    setStatus(`Error: ${error.message}`);
   }
 
-  document.querySelector('[data-execute-form]').addEventListener('submit', saveExecute);
+  const form = document.querySelector('[data-execute-form]');
+  form.addEventListener('submit', saveExecute);
+  form.addEventListener('input', renderCardPreview);
+  form.addEventListener('change', renderCardPreview);
+
+  document.querySelector('[data-create-card]').addEventListener('click', startNewCard);
   document.querySelector('[data-execute-reset]').addEventListener('click', resetExecuteForm);
   document.querySelector('[data-execute-search]').addEventListener('input', renderExecuteList);
   document.querySelector('[data-execute-export]').addEventListener('click', exportExecutes);
+  document.querySelector('[data-execute-export-bottom]').addEventListener('click', exportExecutes);
   document.querySelector('[data-execute-import]').addEventListener('change', importExecutes);
+  document.querySelector('[data-thumbnail-file]').addEventListener('change', selectThumbnailFile);
+  document.querySelector('[data-video-file]').addEventListener('change', selectVideoFile);
+
+  renderCardPreview();
 })();
 
 function saveExecute(event) {
@@ -58,10 +69,10 @@ function saveExecute(event) {
   if (editingExecuteId) {
     const index = executeData.executes.findIndex(entry => entry.id === editingExecuteId);
     executeData.executes[index] = item;
-    toast('Execute actualizado');
+    toast('Tarjeta actualizada');
   } else {
     executeData.executes.unshift(item);
-    toast('Execute añadido');
+    toast('Tarjeta creada');
   }
 
   markExecutePending();
@@ -76,28 +87,40 @@ function renderExecuteList() {
     return text.includes(query);
   });
 
-  document.querySelector('[data-execute-count]').textContent = `${executeData.executes.length} entradas`;
+  document.querySelector('[data-execute-count]').textContent = `${executeData.executes.length} ${executeData.executes.length === 1 ? 'tarjeta' : 'tarjetas'}`;
   document.querySelector('[data-execute-items]').innerHTML = items.length
     ? items.map(item => `
-      <div class="admin-item">
-        <div>
+      <div class="admin-item execute-admin-item">
+        <img src="${escapeAttr(item.thumbnail)}" alt="" loading="lazy" onerror="this.hidden=true">
+        <div class="execute-admin-item-copy">
           <strong>${escapeHtml(item.title)}</strong>
-          <p>${escapeHtml(item.map)}${item.site ? ` · Site ${escapeHtml(item.site)}` : ''} · ${item.published ? 'Publicado' : 'Borrador'}</p>
+          <p>${escapeHtml(item.map)}${item.site ? ` · Site ${escapeHtml(item.site)}` : ''} · ${item.published ? 'Publicada' : 'Borrador'}</p>
         </div>
         <div class="admin-item-actions">
           <button class="small-btn" type="button" data-edit-execute="${escapeAttr(item.id)}">Editar</button>
+          <button class="small-btn" type="button" data-duplicate-execute="${escapeAttr(item.id)}">Duplicar</button>
           <button class="small-btn" type="button" data-delete-execute="${escapeAttr(item.id)}">Eliminar</button>
         </div>
       </div>
     `).join('')
-    : '<div class="empty">No hay resultados.</div>';
+    : '<div class="empty">No hay tarjetas.</div>';
 
   document.querySelectorAll('[data-edit-execute]').forEach(button => {
     button.addEventListener('click', () => editExecute(button.dataset.editExecute));
   });
+  document.querySelectorAll('[data-duplicate-execute]').forEach(button => {
+    button.addEventListener('click', () => duplicateExecute(button.dataset.duplicateExecute));
+  });
   document.querySelectorAll('[data-delete-execute]').forEach(button => {
     button.addEventListener('click', () => deleteExecute(button.dataset.deleteExecute));
   });
+}
+
+function startNewCard() {
+  resetExecuteForm();
+  const form = document.querySelector('[data-execute-form]');
+  form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  form.elements.title.focus();
 }
 
 function editExecute(id) {
@@ -105,6 +128,30 @@ function editExecute(id) {
   if (!item) return;
 
   editingExecuteId = id;
+  fillForm(item);
+  document.querySelector('[data-execute-form-title]').textContent = 'Editar tarjeta';
+  document.querySelector('[data-execute-save]').textContent = 'Guardar cambios';
+  document.querySelector('[data-execute-form]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  renderCardPreview();
+}
+
+function duplicateExecute(id) {
+  const item = executeData.executes.find(entry => entry.id === id);
+  if (!item) return;
+
+  editingExecuteId = null;
+  fillForm({
+    ...item,
+    id: `${item.id}-copia`,
+    title: `${item.title} (copia)`
+  });
+  document.querySelector('[data-execute-form-title]').textContent = 'Duplicar tarjeta';
+  document.querySelector('[data-execute-save]').textContent = 'Crear copia';
+  document.querySelector('[data-execute-form]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  renderCardPreview();
+}
+
+function fillForm(item) {
   const form = document.querySelector('[data-execute-form]');
   form.elements.title.value = item.title || '';
   form.elements.id.value = item.id || '';
@@ -118,22 +165,18 @@ function editExecute(id) {
   form.elements.steps.value = (item.steps || []).join('\n');
   form.elements.tags.value = (item.tags || []).join(', ');
   form.elements.published.checked = item.published !== false;
-
-  document.querySelector('[data-execute-form-title]').textContent = 'Editar execute';
-  document.querySelector('[data-execute-save]').textContent = 'Guardar cambios';
-  form.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function deleteExecute(id) {
   const item = executeData.executes.find(entry => entry.id === id);
   if (!item) return;
-  if (!confirm(`¿Eliminar "${item.title}"?`)) return;
+  if (!confirm(`¿Eliminar la tarjeta "${item.title}"?`)) return;
 
   executeData.executes = executeData.executes.filter(entry => entry.id !== id);
   if (editingExecuteId === id) resetExecuteForm();
   markExecutePending();
   renderExecuteList();
-  toast('Execute eliminado');
+  toast('Tarjeta eliminada');
 }
 
 function resetExecuteForm() {
@@ -142,8 +185,75 @@ function resetExecuteForm() {
   form.reset();
   form.elements.difficulty.value = 'media';
   form.elements.published.checked = true;
-  document.querySelector('[data-execute-form-title]').textContent = 'Nuevo execute';
-  document.querySelector('[data-execute-save]').textContent = 'Añadir execute';
+  document.querySelector('[data-execute-form-title]').textContent = 'Nueva tarjeta';
+  document.querySelector('[data-execute-save]').textContent = 'Crear tarjeta';
+  clearPreviewObjectUrl();
+  renderCardPreview();
+}
+
+function renderCardPreview() {
+  const form = document.querySelector('[data-execute-form]');
+  const title = form.elements.title.value.trim() || 'Título de la tarjeta';
+  const map = form.elements.map.value.trim() || 'Mapa';
+  const site = form.elements.site.value.trim();
+  const difficulty = form.elements.difficulty.value || 'media';
+  const description = form.elements.description.value.trim() || 'La descripción aparecerá aquí.';
+  const thumbnail = previewObjectUrl || form.elements.thumbnail.value.trim();
+
+  document.querySelector('[data-card-preview]').innerHTML = `
+    <article class="card map-card execute-preview-card">
+      ${thumbnail
+        ? `<img src="${escapeAttr(thumbnail)}" alt="Vista previa de ${escapeAttr(title)}" onerror="this.outerHTML='<div class=&quot;execute-preview-placeholder&quot;>Añade una portada</div>'">`
+        : '<div class="execute-preview-placeholder">Añade una portada</div>'}
+      <div class="map-card-body">
+        <div class="type-counts">
+          <span>${escapeHtml(map)}</span>
+          ${site ? `<span>Site ${escapeHtml(site)}</span>` : ''}
+          <span>${escapeHtml(difficulty)}</span>
+        </div>
+        <h2>${escapeHtml(title)}</h2>
+        <p>${escapeHtml(description)}</p>
+      </div>
+    </article>
+  `;
+}
+
+function selectThumbnailFile(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  clearPreviewObjectUrl();
+  previewObjectUrl = URL.createObjectURL(file);
+  const safeName = sanitizeFileName(file.name);
+  const path = `assets/executes/${safeName}`;
+  document.querySelector('[name="thumbnail"]').value = path;
+  document.querySelector('[data-thumbnail-file-help]').textContent = `Ruta sugerida: ${path}. Copia el archivo a assets/executes/.`;
+  renderCardPreview();
+}
+
+function selectVideoFile(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+
+  const safeName = sanitizeFileName(file.name);
+  const path = `assets/videos/${safeName}`;
+  document.querySelector('[name="videoUrl"]').value = path;
+  document.querySelector('[data-video-file-help]').textContent = `Ruta sugerida: ${path}. Copia el archivo a assets/videos/.`;
+  renderCardPreview();
+}
+
+function clearPreviewObjectUrl() {
+  if (previewObjectUrl) {
+    URL.revokeObjectURL(previewObjectUrl);
+    previewObjectUrl = null;
+  }
+}
+
+function sanitizeFileName(name) {
+  const dot = name.lastIndexOf('.');
+  const base = dot > 0 ? name.slice(0, dot) : name;
+  const extension = dot > 0 ? name.slice(dot).toLowerCase() : '';
+  return `${slugify(base) || 'archivo'}${extension}`;
 }
 
 function exportExecutes() {
@@ -155,7 +265,7 @@ function exportExecutes() {
   link.download = 'executes.json';
   link.click();
   URL.revokeObjectURL(url);
-  document.querySelector('[data-execute-status]').textContent = 'JSON exportado. Reemplaza data/executes.json en GitHub.';
+  setStatus('JSON exportado. Reemplaza data/executes.json en tu clon local y haz push.');
   toast('executes.json exportado');
 }
 
@@ -169,7 +279,7 @@ async function importExecutes(event) {
     executeData = parsed;
     renderExecuteList();
     resetExecuteForm();
-    document.querySelector('[data-execute-status]').textContent = `Cargado: ${file.name}`;
+    setStatus(`Cargado: ${file.name}`);
     toast('JSON importado');
   } catch (error) {
     toast(`Error: ${error.message}`);
@@ -182,14 +292,19 @@ function validateExecuteData(data) {
   if (!data || !Array.isArray(data.executes)) throw new Error('Formato inválido: falta el array executes');
   const ids = new Set();
   data.executes.forEach(item => {
-    if (!item.id || !item.title || !item.map || !item.thumbnail) throw new Error(`Execute incompleto: ${item.id || 'sin ID'}`);
+    if (!item.id || !item.title || !item.map || !item.thumbnail) throw new Error(`Tarjeta incompleta: ${item.id || 'sin ID'}`);
     if (ids.has(item.id)) throw new Error(`ID duplicado: ${item.id}`);
     ids.add(item.id);
   });
 }
 
 function markExecutePending() {
-  document.querySelector('[data-execute-status]').textContent = 'Cambios pendientes de exportar y subir a GitHub.';
+  setStatus('Cambios pendientes de exportar y subir a GitHub.');
+}
+
+function setStatus(text) {
+  const status = document.querySelector('[data-execute-status]');
+  if (status) status.textContent = text;
 }
 
 function lines(value) {
@@ -197,5 +312,10 @@ function lines(value) {
 }
 
 function slugify(text) {
-  return String(text || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return String(text || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }

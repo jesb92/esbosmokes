@@ -35,3 +35,80 @@
 @media (max-width: 640px) {
   .execute-gallery { grid-template-columns: 1fr; }
 }
+
+/* Editor de tarjetas Execute */
+.execute-admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+
+.execute-live-preview {
+  margin-top: 22px;
+}
+
+.execute-live-preview [data-card-preview] {
+  max-width: 560px;
+}
+
+.execute-preview-card {
+  pointer-events: none;
+}
+
+.execute-preview-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.media-picker-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.execute-admin-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.execute-admin-item > img {
+  width: 82px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.execute-admin-item-copy {
+  min-width: 0;
+}
+
+.execute-admin-item-copy strong,
+.execute-admin-item-copy p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 720px) {
+  .execute-admin-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .execute-admin-item > img {
+    width: 64px;
+    height: 48px;
+  }
+
+  .execute-admin-item .admin-item-actions {
+    grid-column: 1 / -1;
+  }
+}

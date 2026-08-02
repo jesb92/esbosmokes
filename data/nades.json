@@ -58,7 +58,7 @@
   "nades": [
     {
       "id": "inferno-muro-banan-oscuro-molotov",
-      "title": "Molo Oscuro",
+      "title": "Molo OscuroW",
       "map": "inferno",
       "type": "molotov",
       "team": "T",
@@ -70,7 +70,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "assets/videos/maps/inferno/molooscuro.mp4",
-      "thumbnail": "assets/maps/mapas/cache/moloscuro2.png",
+      "thumbnail": "assets/maps/mapas/inferno/moloscuro2.png",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],
@@ -92,7 +92,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "assets/videos/maps/inferno/molo2sand.mp4",
-      "thumbnail": "assets/maps/mapas/cache/molo2.png",
+      "thumbnail": "assets/maps/mapas/inferno/molo2.png",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],

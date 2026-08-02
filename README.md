@@ -1,4 +1,14 @@
-# EsboSmokes
+# EsboSmokes — versión GitHub Pages
+
+Web estática para organizar lineups de Counter-Strike 2. Está preparada para publicarse directamente con GitHub Pages.
+
+## No necesita
+
+- Python
+- Node.js
+- Base de datos
+- Servidor propio
+- Instalación de dependencias
 
 ## Funciones incluidas
 

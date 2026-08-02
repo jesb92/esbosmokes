@@ -20,11 +20,9 @@
       "map": "mirage",
       "site": "T spawn > Mid > A",
       "difficulty": "media",
-      "image": "assets/executes/mirage/midto.jpg",
+      "thumbnail": "assets/executes/mirage/midto.JPG",
       "videoUrl": "",
-      "gallery": [
-        "assets/executes/mirage/midtoa.jpg"
-      ],
+      "gallery": [],
       "description": "",
       "steps": [],
       "tags": [],

@@ -23,7 +23,7 @@ let editingMapSlug = null;
   document.querySelector('[data-export-json]')?.addEventListener('click', exportJson);
   document.querySelector('[data-import-json]')?.addEventListener('change', importJson);
   document.querySelector('[data-admin-search]')?.addEventListener('input', renderAdminList);
-  document.querySelector('[data-video-files]')?.addEventListener('change', selectVideoFiles);
+  document.querySelector('[data-add-video]')?.addEventListener('click', () => addVideoRow());
 })();
 
 function populateMaps(selectedValue = '') {
@@ -176,15 +176,7 @@ function saveEntry(event) {
     const existing = workingData.nades.find(nade => nade.id === editingId);
     const mapRecord = workingData.maps.find(item => item.slug === map);
 
-    let videos = parseVideoLines(formValue('videos'));
-
-    // Compatibilidad con el campo antiguo videoUrl.
-    if (!videos.length && formValue('videoUrl')) {
-      videos = [{
-        title: 'Vídeo 1',
-        url: formValue('videoUrl')
-      }];
-    }
+    const videos = collectVideos();
 
     const entry = {
       id: proposedId,
@@ -258,16 +250,7 @@ function editEntry(id) {
     if (el) el.value = entry[name] || '';
   });
   const normalizedVideos = normalizeVideos(entry.videos, entry.videoUrl);
-  const videosField = getNamedField('videos');
-  const legacyVideoField = getNamedField('videoUrl');
-
-  if (videosField) {
-    videosField.value = serializeVideoLines(normalizedVideos);
-  }
-
-  if (legacyVideoField) {
-    legacyVideoField.value = normalizedVideos[0]?.url || '';
-  }
+  setVideoRows(normalizedVideos);
 
   document.querySelector('[name="steps"]').value = (entry.steps || []).join('\n');
   document.querySelector('[name="tags"]').value = (entry.tags || []).join(', ');
@@ -295,11 +278,10 @@ function resetForm() {
   form.reset();
   const publishedField = getNamedField('published');
   const typeField = getNamedField('type');
-  const legacyVideoField = getNamedField('videoUrl');
 
   if (publishedField) publishedField.checked = true;
   if (typeField) typeField.value = 'smoke';
-  if (legacyVideoField) legacyVideoField.value = '';
+  setVideoRows([]);
   document.querySelector('[data-form-title]').textContent = 'Nueva lineup';
   document.querySelector('[data-save-label]').textContent = 'Añadir lineup';
 }
@@ -316,7 +298,7 @@ function renderAdminList() {
     <div class="admin-item">
       <div>
         <strong>${escapeHtml(n.title)}</strong>
-        <p>${escapeHtml(n.map)} · ${escapeHtml(n.origin)} → ${escapeHtml(n.target)} · ${n.published ? 'Publicada' : 'Borrador'}</p>
+        <p>${escapeHtml(n.map)} · ${escapeHtml(n.origin)} → ${escapeHtml(n.target)} · ${normalizeVideos(n.videos, n.videoUrl).length} vídeo(s) · ${n.published ? 'Publicada' : 'Borrador'}</p>
       </div>
       <div class="admin-item-actions">
         <button class="small-btn" type="button" onclick="editEntry('${escapeJs(n.id)}')">Editar</button>
@@ -326,29 +308,117 @@ function renderAdminList() {
 }
 
 
-function selectVideoFiles(event) {
-  const files = Array.from(event.target.files || []);
-  if (!files.length) return;
+function addVideoRow(video = {}) {
+  const container = document.querySelector('[data-video-rows]');
+  if (!container) return;
 
-  const textarea = document.querySelector('[name="videos"]');
-  const currentLines = textarea.value
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean);
+  const currentCount = container.querySelectorAll('[data-video-row]').length;
 
-  const selectedMap = formValue('map') || 'mapa';
-  const additions = files.map(file => {
-    const safeName = sanitizeFileName(file.name);
-    const title = titleFromFileName(safeName);
-    return `${title} | assets/videos/${selectedMap}/${safeName}`;
+  if (currentCount >= 20) {
+    toast('El límite es de 20 vídeos por lineup');
+    return;
+  }
+
+  const row = document.createElement('div');
+  row.className = 'multi-video-row';
+  row.dataset.videoRow = '';
+
+  row.innerHTML = `
+    <div class="video-row-number">${currentCount + 1}</div>
+
+    <div class="video-row-fields">
+      <label class="video-route-field">
+        <span>Nombre del vídeo</span>
+        <input
+          class="input"
+          type="text"
+          data-video-title
+          placeholder="Spawn ${currentCount + 1}"
+          value="${escapeAttr(video.title || '')}"
+        >
+      </label>
+
+      <label class="video-route-field">
+        <span>Ruta del vídeo</span>
+        <input
+          class="input"
+          type="text"
+          data-video-url
+          placeholder="assets/videos/mirage/spawn-${currentCount + 1}.mp4"
+          value="${escapeAttr(video.url || '')}"
+        >
+      </label>
+    </div>
+
+    <button
+      class="small-btn video-remove-btn"
+      type="button"
+      data-remove-video
+      aria-label="Eliminar esta ruta de vídeo"
+    >
+      Eliminar
+    </button>
+  `;
+
+  row.querySelector('[data-remove-video]').addEventListener('click', () => {
+    row.remove();
+    renumberVideoRows();
+
+    if (!container.querySelector('[data-video-row]')) {
+      addVideoRow();
+    }
+
+    markPending();
   });
 
-  textarea.value = [...currentLines, ...additions].join('\n');
-  document.querySelector('[data-video-files-help]').textContent =
-    `${files.length} ${files.length === 1 ? 'vídeo añadido' : 'vídeos añadidos'}. Copia los archivos a assets/videos/${selectedMap}/.`;
+  row.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', markPending);
+  });
 
-  event.target.value = '';
-  markPending();
+  container.appendChild(row);
+  renumberVideoRows();
+}
+
+function setVideoRows(videos) {
+  const container = document.querySelector('[data-video-rows]');
+  if (!container) return;
+
+  container.innerHTML = '';
+  const normalized = normalizeVideos(videos);
+
+  if (normalized.length) {
+    normalized.slice(0, 20).forEach(addVideoRow);
+  } else {
+    addVideoRow();
+  }
+}
+
+function renumberVideoRows() {
+  document.querySelectorAll('[data-video-row]').forEach((row, index) => {
+    const number = row.querySelector('.video-row-number');
+    if (number) number.textContent = String(index + 1);
+
+    const title = row.querySelector('[data-video-title]');
+    if (title && !title.value.trim()) {
+      title.placeholder = `Vídeo ${index + 1}`;
+    }
+  });
+}
+
+function collectVideos() {
+  return Array.from(document.querySelectorAll('[data-video-row]'))
+    .map((row, index) => {
+      const title = row.querySelector('[data-video-title]')?.value.trim() || '';
+      const url = row.querySelector('[data-video-url]')?.value.trim() || '';
+
+      if (!url) return null;
+
+      return {
+        title: title || `Vídeo ${index + 1}`,
+        url
+      };
+    })
+    .filter(Boolean);
 }
 
 function normalizeVideos(videos, legacyVideoUrl = '') {
@@ -372,57 +442,15 @@ function normalizeVideos(videos, legacyVideoUrl = '') {
   }).filter(Boolean);
 
   const legacy = String(legacyVideoUrl || '').trim();
+
   if (!normalized.length && legacy) {
-    normalized.push({ title: 'Vídeo 1', url: legacy });
+    normalized.push({
+      title: 'Vídeo 1',
+      url: legacy
+    });
   }
 
   return normalized;
-}
-
-function parseVideoLines(value) {
-  return String(value || '')
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean)
-    .map((line, index) => {
-      const separator = line.indexOf('|');
-
-      if (separator === -1) {
-        return {
-          title: `Vídeo ${index + 1}`,
-          url: line
-        };
-      }
-
-      const title = line.slice(0, separator).trim() || `Vídeo ${index + 1}`;
-      const url = line.slice(separator + 1).trim();
-
-      return url ? { title, url } : null;
-    })
-    .filter(Boolean);
-}
-
-function serializeVideoLines(videos) {
-  return normalizeVideos(videos)
-    .map((video, index) => `${video.title || `Vídeo ${index + 1}`} | ${video.url}`)
-    .join('\n');
-}
-
-function sanitizeFileName(fileName) {
-  const name = String(fileName || '').trim();
-  const dot = name.lastIndexOf('.');
-  const base = dot > 0 ? name.slice(0, dot) : name;
-  const extension = dot > 0 ? name.slice(dot).toLowerCase() : '';
-  return `${slugify(base) || 'video'}${extension}`;
-}
-
-function titleFromFileName(fileName) {
-  const base = String(fileName || '').replace(/\.[^.]+$/, '');
-  return base
-    .split(/[-_]+/)
-    .filter(Boolean)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ') || 'Vídeo';
 }
 
 function exportJson() {

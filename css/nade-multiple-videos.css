@@ -114,3 +114,20 @@
     justify-self: start;
   }
 }
+
+
+/* Campos manuales de ruta */
+.video-route-field {
+  display: grid;
+  gap: 6px;
+}
+
+.video-route-field > span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.multi-video-editor .form-help strong {
+  word-break: break-all;
+}

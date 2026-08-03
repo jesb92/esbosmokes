@@ -1,44 +1,32 @@
-# Vídeos añadidos manualmente por ruta
+# Corrección del error `video is null`
 
-Esta versión elimina el selector de archivos del administrador.
+El error aparece porque `nade.html` y `js/nade.js` pertenecen a versiones diferentes.
 
-Cada vídeo tiene dos campos visibles:
+## Reemplaza estos archivos
 
-- Nombre del vídeo.
-- Ruta del vídeo.
-
-Ejemplo:
-
-```text
-Nombre: Spawn 1
-Ruta: assets/videos/mirage/spawn-1.mp4
-```
-
-Para añadir más vídeos, pulsa **Añadir otra ruta**. Puedes añadir hasta 20.
-
-## Instalar
-
-Reemplaza:
-
-- `admin.html`
-- `js/admin.js`
-- `css/nade-multiple-videos.css`
-
-No reemplaces:
-
-- `data/nades.json`
 - `nade.html`
 - `js/nade.js`
+- `css/nade-multiple-videos.css`
 
-## Guardar
+No reemplaces `data/nades.json`.
 
-1. Abre `admin.html`.
-2. Edita una lineup.
-3. Escribe las rutas de los vídeos.
-4. Pulsa **Guardar cambios**.
-5. Pulsa **Exportar JSON**.
-6. Sustituye `data/nades.json`.
-7. Copia los vídeos físicamente a las rutas indicadas.
-8. Haz commit y push.
+## Después
 
-El JSON conservará todos los vídeos dentro de `videos` y copiará el primero en `videoUrl` para compatibilidad.
+1. Haz commit y push.
+2. Espera a que GitHub Pages termine el despliegue.
+3. Abre una smoke.
+4. Recarga con `Ctrl + F5`.
+
+El nuevo JavaScript acepta tanto:
+
+```html
+<div data-video></div>
+```
+
+como:
+
+```html
+<div data-video-section></div>
+```
+
+por lo que no volverá a intentar usar `innerHTML` sobre un elemento inexistente.

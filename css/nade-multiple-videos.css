@@ -1,116 +1,34 @@
-/* Editor y reproductor multivídeo para humos y lineups */
+/* Campo multivídeo por líneas y selector en la ficha */
 
-.multi-video-editor {
-  display: grid;
-  gap: 14px;
+#videos {
+  min-height: 260px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  line-height: 1.55;
 }
 
-.multi-video-heading {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.multi-video-heading label {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.multi-video-rows {
+.nade-video-viewer {
   display: grid;
   gap: 12px;
 }
 
-.multi-video-row {
+.nade-video-control {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: center;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--panel-2);
+  gap: 7px;
+  max-width: 440px;
 }
 
-.video-row-number {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #17130a;
-  font-weight: 800;
-}
-
-.video-row-fields {
-  display: grid;
-  grid-template-columns: minmax(150px, .7fr) minmax(230px, 1.3fr);
-  gap: 10px;
-}
-
-.video-remove-btn {
-  white-space: nowrap;
-}
-
-.media-picker-actions {
-  margin-top: 0;
-}
-
-.admin-status-error {
-  color: #ff8f8f;
+.nade-video-control label {
+  color: var(--muted);
+  font-size: 13px;
   font-weight: 700;
 }
 
-.nade-video-section {
-  display: grid;
-  gap: 16px;
+.nade-video-control select {
+  width: 100%;
 }
 
-.nade-video-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.nade-video-tab {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--panel-2);
-  color: var(--text);
-  padding: 9px 13px;
-  cursor: pointer;
-  font: inherit;
-}
-
-.nade-video-tab:hover,
-.nade-video-tab.is-active {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #17130a;
-}
-
-.nade-current-video h2 {
-  margin: 0 0 12px;
+.nade-video-title {
+  margin: 0;
   font-size: clamp(18px, 2.4vw, 25px);
-}
-
-@media (max-width: 760px) {
-  .multi-video-heading {
-    display: grid;
-  }
-
-  .multi-video-row {
-    grid-template-columns: 30px minmax(0, 1fr);
-  }
-
-  .video-row-fields {
-    grid-template-columns: 1fr;
-  }
-
-  .video-remove-btn {
-    grid-column: 2;
-    justify-self: start;
-  }
 }

@@ -14,22 +14,13 @@
     document.querySelector('[data-route]').innerHTML = `${escapeHtml(nade.origin)} <span class="arrow">→</span> ${escapeHtml(nade.target)}`;
 
     const videos = normalizeNadeVideos(nade.videos, nade.videoUrl);
-    const videoContainer = document.querySelector(
-      '[data-video-section], [data-video]'
-    );
+    const videoViewer = document.querySelector('[data-video-viewer], [data-video]');
 
-    if (!videoContainer) {
-      throw new Error(
-        'No se encontró el contenedor de vídeo en nade.html. ' +
-        'Reemplaza nade.html y js/nade.js con la misma versión.'
-      );
+    if (!videoViewer) {
+      throw new Error('No se encontró el contenedor de vídeos en nade.html.');
     }
 
-    renderNadeVideoSection(
-      videoContainer,
-      videos,
-      nade.title
-    );
+    renderNadeVideos(videoViewer, videos, nade.title);
 
     const favorite = getFavorites().includes(nade.id);
     const favBtn = document.querySelector('[data-detail-favorite]');
@@ -46,8 +37,7 @@
     document.querySelector('[data-details]').innerHTML = [
       ['Mapa', map?.name || nade.map], ['Granada', TYPE_LABELS[nade.type] || nade.type],
       ['Equipo', nade.team], ['Dificultad', nade.difficulty], ['Lanzamiento', nade.throw],
-      ['Movimiento', nade.movement], ['Precisión', nade.precision],
-      ['Vídeos', String(videos.length)]
+      ['Movimiento', nade.movement], ['Precisión', nade.precision], ['Vídeos', String(videos.length)]
     ].map(([label, value]) => `<div class="detail-item"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join('');
 
     document.querySelector('[data-steps]').innerHTML = (nade.steps || []).map(step => `<li>${escapeHtml(step)}</li>`).join('');
@@ -72,38 +62,34 @@
 function normalizeNadeVideos(videos, legacyVideoUrl = '') {
   const source = Array.isArray(videos) ? videos : [];
 
-  const normalized = source.map((video, index) => {
-    if (typeof video === 'string') {
-      const url = video.trim();
-      return url ? { title: `Vídeo ${index + 1}`, url } : null;
-    }
+  const normalized = source
+    .map((video, index) => {
+      if (typeof video === 'string') {
+        const url = video.trim();
+        return url ? { title: `Vídeo ${index + 1}`, url } : null;
+      }
 
-    if (!video || typeof video !== 'object') return null;
+      if (!video || typeof video !== 'object') return null;
 
-    const url = String(video.url || video.videoUrl || '').trim();
-    if (!url) return null;
+      const url = String(video.url || video.videoUrl || '').trim();
+      if (!url) return null;
 
-    return {
-      title: String(video.title || `Vídeo ${index + 1}`).trim(),
-      url
-    };
-  }).filter(Boolean);
+      return {
+        title: String(video.title || `Vídeo ${index + 1}`).trim(),
+        url
+      };
+    })
+    .filter(Boolean);
 
   const legacy = String(legacyVideoUrl || '').trim();
-
   if (!normalized.length && legacy) {
-    normalized.push({
-      title: 'Vídeo 1',
-      url: legacy
-    });
+    normalized.push({ title: 'Vídeo 1', url: legacy });
   }
 
   return normalized;
 }
 
-function renderNadeVideoSection(container, videos, lineupTitle) {
-  if (!container) return;
-
+function renderNadeVideos(container, videos, lineupTitle) {
   if (!videos.length) {
     container.innerHTML = `
       <div class="video-shell">
@@ -114,63 +100,44 @@ function renderNadeVideoSection(container, videos, lineupTitle) {
   }
 
   container.innerHTML = `
-    ${
-      videos.length > 1
-        ? `
-          <div class="nade-video-tabs" role="tablist" aria-label="Vídeos de la lineup">
-            ${videos.map((video, index) => `
-              <button
-                class="nade-video-tab ${index === 0 ? 'is-active' : ''}"
-                type="button"
-                data-video-index="${index}"
-              >
-                ${escapeHtml(video.title || `Vídeo ${index + 1}`)}
-              </button>
-            `).join('')}
-          </div>
-        `
-        : ''
-    }
-
-    <div class="nade-current-video">
-      <h2 data-current-video-title>
-        ${escapeHtml(videos[0].title || 'Vídeo 1')}
-      </h2>
-
-      <div class="video-shell" data-current-video-player>
-        ${renderVideoPlayer(
-          videos[0].url,
-          `${videos[0].title || 'Vídeo 1'} de ${lineupTitle}`
-        )}
+    ${videos.length > 1 ? `
+      <div class="nade-video-control">
+        <label for="nade-video-selector">Seleccionar vídeo</label>
+        <select id="nade-video-selector" data-video-selector>
+          ${videos.map((video, index) => `
+            <option value="${index}">${escapeHtml(video.title || `Vídeo ${index + 1}`)}</option>
+          `).join('')}
+        </select>
       </div>
+    ` : ''}
+
+    <h2 class="nade-video-title" data-video-title>
+      ${escapeHtml(videos[0].title || 'Vídeo 1')}
+    </h2>
+
+    <div class="video-shell" data-video-player>
+      ${renderVideoPlayer(videos[0].url, `${videos[0].title || 'Vídeo 1'} de ${lineupTitle}`)}
     </div>
   `;
 
-  container.querySelectorAll('[data-video-index]').forEach(button => {
-    button.addEventListener('click', () => {
-      const index = Number(button.dataset.videoIndex);
-      const video = videos[index];
+  const selector = container.querySelector('[data-video-selector]');
+  if (!selector) return;
 
-      if (!video) return;
+  selector.addEventListener('change', () => {
+    const index = Number(selector.value);
+    const selected = videos[index];
+    if (!selected) return;
 
-      container.querySelectorAll('[data-video-index]').forEach(item => {
-        item.classList.toggle('is-active', item === button);
-      });
+    const title = container.querySelector('[data-video-title]');
+    const player = container.querySelector('[data-video-player]');
 
-      const title = container.querySelector('[data-current-video-title]');
-      const player = container.querySelector('[data-current-video-player]');
-
-      if (title) {
-        title.textContent = video.title || `Vídeo ${index + 1}`;
-      }
-
-      if (player) {
-        player.innerHTML = renderVideoPlayer(
-          video.url,
-          `${video.title || `Vídeo ${index + 1}`} de ${lineupTitle}`
-        );
-      }
-    });
+    if (title) title.textContent = selected.title || `Vídeo ${index + 1}`;
+    if (player) {
+      player.innerHTML = renderVideoPlayer(
+        selected.url,
+        `${selected.title || `Vídeo ${index + 1}`} de ${lineupTitle}`
+      );
+    }
   });
 }
 

@@ -7,7 +7,7 @@
   <title>Editor de contenido · EsboSmokes</title>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/nade-multiple-videos.css?v=8">
+  <link rel="stylesheet" href="css/nade-multiple-videos.css?v=12">
 </head>
 <body>
   <div data-site-header></div>
@@ -70,40 +70,20 @@
               <div class="form-field"><label for="throw">Lanzamiento</label><input class="input" id="throw" name="throw" placeholder="jumpthrow"></div>
               <div class="form-field"><label for="movement">Movimiento</label><input class="input" id="movement" name="movement" placeholder="quieto"></div>
               <div class="form-field"><label for="precision">Precisión</label><select id="precision" name="precision"><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option></select></div>
-
-              
-              <div class="form-field full multi-video-editor">
-                <div class="multi-video-heading">
-                  <div>
-                    <label>Vídeos de la lineup</label>
-                    <small class="form-help">
-                      Escribe manualmente la ruta de cada vídeo, igual que haces con la miniatura.
-                    </small>
-                  </div>
-
-                  <button class="btn" type="button" data-add-video>
-                    Añadir otra ruta
-                  </button>
-                </div>
-
-                <div class="multi-video-rows" data-video-rows></div>
-
+              <div class="form-field full">
+                <label for="videos">Vídeos, uno por línea</label>
+                <textarea
+                  id="videos"
+                  name="videos"
+                  rows="12"
+                  placeholder="Spawn 1 | assets/insta/mirage/pos1.mp4&#10;Spawn 2 | assets/insta/mirage/pos2.mp4&#10;Spawn 3 | assets/insta/mirage/pos3.mp4"
+                ></textarea>
                 <small class="form-help">
-                  Ejemplo:
-                  <strong>assets/videos/mirage/spawn-1.mp4</strong>.
-                  El archivo debe existir físicamente en esa misma carpeta.
+                  Formato: <strong>Nombre del vídeo | ruta</strong>. Puedes añadir tantas líneas como necesites.
+                  También puedes escribir solo la ruta y el sistema generará el nombre automáticamente.
                 </small>
               </div>
-
-              <div class="form-field full">
-                <label for="thumbnail">Miniatura</label>
-                <input
-                  class="input"
-                  id="thumbnail"
-                  name="thumbnail"
-                  placeholder="assets/maps/mirage.svg"
-                >
-              </div>
+                            <div class="form-field full"><label for="thumbnail">Miniatura</label><input class="input" id="thumbnail" name="thumbnail" placeholder="assets/maps/mirage.svg"></div>
               <div class="form-field full"><label for="setpos">Comando setpos</label><input class="input" id="setpos" name="setpos" placeholder="setpos ...; setang ..."></div>
               <div class="form-field full"><label for="description">Descripción</label><textarea id="description" name="description" rows="3" placeholder="Qué cubre y cuándo utilizarla."></textarea></div>
               <div class="form-field full"><label for="steps">Pasos, uno por línea</label><textarea id="steps" name="steps" rows="5" placeholder="Colócate en la esquina…&#10;Apunta al punto…&#10;Realiza el lanzamiento…"></textarea></div>
@@ -135,7 +115,8 @@
     </section>
   </main>
   <div data-site-footer></div>
+
   <script src="js/common.js"></script>
-  <script src="js/admin.js?v=8"></script>
+  <script src="js/admin.js?v=12"></script>
 </body>
 </html>

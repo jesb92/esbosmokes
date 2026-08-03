@@ -1,32 +1,25 @@
-# Corrección del error `video is null`
+# Multivídeo por líneas, sin límite programado
 
-El error aparece porque `nade.html` y `js/nade.js` pertenecen a versiones diferentes.
+Reemplaza:
 
-## Reemplaza estos archivos
-
+- `admin.html`
 - `nade.html`
+- `js/admin.js`
 - `js/nade.js`
 - `css/nade-multiple-videos.css`
 
 No reemplaces `data/nades.json`.
 
-## Después
+En **Vídeos, uno por línea** escribe:
 
-1. Haz commit y push.
-2. Espera a que GitHub Pages termine el despliegue.
-3. Abre una smoke.
-4. Recarga con `Ctrl + F5`.
-
-El nuevo JavaScript acepta tanto:
-
-```html
-<div data-video></div>
+```text
+Spawn 1 | assets/insta/mirage/pos1.mp4
+Spawn 2 | assets/insta/mirage/pos2.mp4
+Spawn 3 | assets/insta/mirage/pos3.mp4
 ```
 
-como:
+No existe un límite programado. Cada línea válida se guarda dentro de `videos`.
 
-```html
-<div data-video-section></div>
-```
+Después pulsa **Guardar cambios**, **Exportar JSON** y sustituye `data/nades.json`.
 
-por lo que no volverá a intentar usar `innerHTML` sobre un elemento inexistente.
+`videoUrl` se rellena automáticamente con el primer vídeo para conservar compatibilidad.

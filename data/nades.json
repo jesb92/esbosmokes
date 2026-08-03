@@ -57,6 +57,146 @@
   ],
   "nades": [
     {
+      "id": "ancient-kats-azul-b-molotov",
+      "title": "Molo Azul B - Kats",
+      "map": "ancient",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Azul B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/molo_azul.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/molo_azul.mp4",
+      "thumbnail": "assets/maps/ancient.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "mirage-kats-corta-smoke",
+      "title": "Smoke Corta B - Kats",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Corta",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/corta.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/corta.mp4",
+      "thumbnail": "assets/maps/mirage.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "mirage-kats-larga-b-smoke",
+      "title": "Smoke Larga B - Kats",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Larga B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/larga.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/larga.mp4",
+      "thumbnail": "assets/maps/mirage.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-larga-ct-smoke",
+      "title": "Smoke CT - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "CT",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/ct.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/ct.mp4",
+      "thumbnail": "assets/maps/ancient.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-larga-donut-smoke",
+      "title": "Smoke Donut - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "Donut",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/donut.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/donut.mp4",
+      "thumbnail": "assets/maps/ancient.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
       "id": "ancient-ct-spawn-codo-smoke",
       "title": "Insta Smokes - CT Spawn",
       "map": "ancient",

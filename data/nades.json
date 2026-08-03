@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "ancient-larga-roto-a-smoke",
+      "title": "Smoke Roto A - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "Roto A",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/roto.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/roto.mp4",
+      "thumbnail": "assets/maps/ancient.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
       "id": "ancient-kats-azul-b-molotov",
       "title": "Molo Azul B - Kats",
       "map": "ancient",

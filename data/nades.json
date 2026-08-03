@@ -69,8 +69,14 @@
       "movement": "W",
       "precision": "alta",
       "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/molooscuro.mp4"
+        }
+      ],
       "videoUrl": "assets/videos/maps/inferno/molooscuro.mp4",
-      "thumbnail": "assets/maps/mapas/inferno/moloscuro2.jpg",
+      "thumbnail": "assets/maps/mapas/inferno/moloscuro.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],

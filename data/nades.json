@@ -534,11 +534,13 @@
       "videos": [
         {
           "title": "Spawn 1",
-          "url": "assets/insta/mirage/pos1.mp4"
+          "url": "assets/insta/mirage/pos1.mp4",
+          "image": "assets/insta/mirage/posis_mirage.jpg"
         },
         {
           "title": "Spawn 2",
-          "url": "assets/insta/mirage/pos2.mp4"
+          "url": "assets/insta/mirage/pos2.mp4",
+          "image": "assets/insta/mirage/posis_mirage.jpg"
         },
         {
           "title": "Spawn 3",

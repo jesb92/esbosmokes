@@ -92,7 +92,7 @@
         }
       ],
       "videoUrl": "assets/insta/ancient/CT/pos1.mp4",
-      "thumbnail": "assets/insta/ancient/posis_ancientct.jpg",
+      "thumbnail": "assets/videos/insta/mirage/posis_miragect.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -321,35 +321,6 @@
         "coffins"
       ],
       "featured": false,
-      "published": true,
-      "createdAt": "2026-07-30"
-    },
-    {
-      "id": "ancient-tspawn-mid-smoke",
-      "title": "Smoke de medio desde T Spawn",
-      "map": "ancient",
-      "type": "smoke",
-      "team": "T",
-      "origin": "T Spawn",
-      "target": "Medio",
-      "difficulty": "media",
-      "throw": "jumpthrow",
-      "movement": "quieto",
-      "precision": "alta",
-      "setpos": "",
-      "videoUrl": "",
-      "thumbnail": "assets/maps/ancient.png",
-      "description": "Permite cruzar y disputar el control de medio con menos exposición.",
-      "steps": [
-        "Pégate a la piedra de referencia.",
-        "Apunta al hueco entre las hojas.",
-        "Haz un jumpthrow."
-      ],
-      "tags": [
-        "mid",
-        "control"
-      ],
-      "featured": true,
       "published": true,
       "createdAt": "2026-07-30"
     },

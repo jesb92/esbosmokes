@@ -57,6 +57,94 @@
   ],
   "nades": [
     {
+      "id": "ancient-ct-spawn-codo-smoke",
+      "title": "Insta Smokes - CT Spawn",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "CT Spawn",
+      "target": "Codo",
+      "difficulty": "difícil",
+      "throw": "W + Click izquierdo + Jumpthrow",
+      "movement": "W + Click izquierdo + Jumpthrow",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Spawn 1",
+          "url": "assets/insta/ancient/CT/pos1.mp4"
+        },
+        {
+          "title": "Spawn 2",
+          "url": "assets/insta/ancient/CT/pos2.mp4"
+        },
+        {
+          "title": "Spawn 3",
+          "url": "assets/insta/ancient/CT/pos3.mp4"
+        },
+        {
+          "title": "Spawn 4",
+          "url": "assets/insta/ancient/CT/pos4.mp4"
+        },
+        {
+          "title": "Spawn 5",
+          "url": "assets/insta/ancient/CT/pos5.mp4"
+        }
+      ],
+      "videoUrl": "assets/insta/ancient/CT/pos1.mp4",
+      "thumbnail": "assets/maps/ancient.png",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-t-spawn-rojo-smoke",
+      "title": "Insta Smokes - T Spawn",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Rojo",
+      "difficulty": "difícil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Spawn 1",
+          "url": "assets/insta/ancient/T/pos1.mp4"
+        },
+        {
+          "title": "Spawn 2",
+          "url": "assets/insta/ancient/T/pos2.mp4"
+        },
+        {
+          "title": "Spawn 3",
+          "url": "assets/insta/ancient/T/pos3.mp4"
+        },
+        {
+          "title": "Spawn 4",
+          "url": "assets/insta/ancient/T/pos4.mp4"
+        },
+        {
+          "title": "Spawn 5",
+          "url": "assets/insta/ancient/T/pos5.mp4"
+        }
+      ],
+      "videoUrl": "assets/insta/ancient/T/pos1.mp4",
+      "thumbnail": "assets/insta/ancient/posis_ancient.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
       "id": "inferno-muro-banan-oscuro-molotov",
       "title": "Molo Oscuro",
       "map": "inferno",

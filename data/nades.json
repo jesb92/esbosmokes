@@ -532,6 +532,7 @@
       "precision": "alta",
       "setpos": "",
       "videoUrl": "assets/insta/mirage/pos1.mp4",
+      "videoUrl": "assets/insta/mirage/pos2.mp4",
       "thumbnail": "assets/insta/mirage/posis_mirage.JPG",
       "description": "Fuerza al defensor de ramp a abandonar la posición o recibir daño.",
       "steps": [

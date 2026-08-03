@@ -13,6 +13,8 @@
     document.querySelector('[data-description]').textContent = nade.description;
     document.querySelector('[data-route]').innerHTML = `${escapeHtml(nade.origin)} <span class="arrow">→</span> ${escapeHtml(nade.target)}`;
 
+    renderSpawnReference(nade);
+
     const videos = normalizeNadeVideos(nade.videos, nade.videoUrl);
     const videoViewer = document.querySelector('[data-video-viewer], [data-video]');
 
@@ -58,6 +60,23 @@
     document.querySelector('main').innerHTML = `<div class="container section"><div class="empty">${escapeHtml(error.message)}</div></div>`;
   }
 })();
+
+
+function renderSpawnReference(nade) {
+  const wrapper = document.querySelector('[data-spawn-image-wrap]');
+  const image = document.querySelector('[data-spawn-image]');
+  const thumbnail = String(nade.thumbnail || '').trim();
+
+  if (!wrapper || !image || !thumbnail) return;
+
+  image.src = thumbnail;
+  image.alt = `Referencia visual de ${nade.title}`;
+  wrapper.hidden = false;
+
+  image.addEventListener('error', () => {
+    wrapper.hidden = true;
+  }, { once: true });
+}
 
 function normalizeNadeVideos(videos, legacyVideoUrl = '') {
   const source = Array.isArray(videos) ? videos : [];

@@ -1,25 +1,33 @@
-# Multivídeo por líneas, sin límite programado
+# Foto encima del vídeo
 
-Reemplaza:
+Esta actualización utiliza la imagen que ya guardas en el campo `thumbnail`.
 
-- `admin.html`
+## Archivos que debes reemplazar
+
 - `nade.html`
-- `js/admin.js`
 - `js/nade.js`
 - `css/nade-multiple-videos.css`
 
-No reemplaces `data/nades.json`.
+No reemplaces:
 
-En **Vídeos, uno por línea** escribe:
+- `admin.html`
+- `js/admin.js`
+- `data/nades.json`
+
+## Uso
+
+En `admin.html`, deja en Miniatura una ruta como:
 
 ```text
-Spawn 1 | assets/insta/mirage/pos1.mp4
-Spawn 2 | assets/insta/mirage/pos2.mp4
-Spawn 3 | assets/insta/mirage/pos3.mp4
+assets/insta/mirage/spawn-reference.jpg
 ```
 
-No existe un límite programado. Cada línea válida se guarda dentro de `videos`.
+En `nades.json` aparecerá:
 
-Después pulsa **Guardar cambios**, **Exportar JSON** y sustituye `data/nades.json`.
+```json
+"thumbnail": "assets/insta/mirage/spawn-reference.jpg"
+```
 
-`videoUrl` se rellena automáticamente con el primer vídeo para conservar compatibilidad.
+Esa imagen se mostrará encima del selector y del reproductor. Será la misma imagen para todos los vídeos de esa lineup.
+
+Si la ruta no existe o la imagen falla al cargar, el bloque se ocultará automáticamente.

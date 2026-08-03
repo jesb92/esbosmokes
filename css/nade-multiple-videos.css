@@ -32,3 +32,31 @@
   margin: 0;
   font-size: clamp(18px, 2.4vw, 25px);
 }
+
+
+/* Imagen de referencia encima del selector y del vídeo */
+.spawn-reference {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.spawn-reference[hidden] {
+  display: none;
+}
+
+.spawn-reference img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: #080a0d;
+}
+
+@media (max-width: 640px) {
+  .spawn-reference img {
+    max-height: 300px;
+  }
+}

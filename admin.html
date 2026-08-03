@@ -7,7 +7,7 @@
   <title>Editor de contenido · EsboSmokes</title>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/nade-multiple-videos.css">
+  <link rel="stylesheet" href="css/nade-multiple-videos.css?v=4">
 </head>
 <body>
   <div data-site-header></div>
@@ -73,6 +73,7 @@
               <div class="form-field full">
   <label for="videos">Vídeos, uno por línea</label>
   <textarea id="videos" name="videos" rows="6" placeholder="Spawn 1 | assets/videos/mirage/spawn-1.mp4&#10;Spawn 2 | assets/videos/mirage/spawn-2.mp4&#10;Vista alternativa | https://youtu.be/..."></textarea>
+  <input type="hidden" id="videoUrl" name="videoUrl" value="">
   <small class="form-help">
     Escribe <strong>Título | ruta</strong>, o solamente la ruta. Acepta MP4, WebM, OGG y YouTube.
   </small>
@@ -118,7 +119,32 @@
     </section>
   </main>
   <div data-site-footer></div>
+
+  <script>
+    (function () {
+      function firstVideoUrl(value) {
+        const firstLine = String(value || '')
+          .split('\n')
+          .map(line => line.trim())
+          .find(Boolean);
+
+        if (!firstLine) return '';
+
+        const separator = firstLine.indexOf('|');
+        return separator === -1
+          ? firstLine
+          : firstLine.slice(separator + 1).trim();
+      }
+
+      document.addEventListener('input', function (event) {
+        if (event.target && event.target.name === 'videos') {
+          const legacy = document.querySelector('[name="videoUrl"]');
+          if (legacy) legacy.value = firstVideoUrl(event.target.value);
+        }
+      });
+    }());
+  </script>
   <script src="js/common.js"></script>
-  <script src="js/admin.js"></script>
+  <script src="js/admin.js?v=4"></script>
 </body>
 </html>

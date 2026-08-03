@@ -16,13 +16,14 @@ let editingMapSlug = null;
     document.querySelector('[data-admin-status]').textContent = error.message;
   }
 
-  document.querySelector('[data-map-form]').addEventListener('submit', saveMap);
-  document.querySelector('[data-map-reset]').addEventListener('click', resetMapForm);
-  document.querySelector('[data-nade-form]').addEventListener('submit', saveEntry);
-  document.querySelector('[data-reset-form]').addEventListener('click', resetForm);
-  document.querySelector('[data-export-json]').addEventListener('click', exportJson);
-  document.querySelector('[data-import-json]').addEventListener('change', importJson);
-  document.querySelector('[data-admin-search]').addEventListener('input', renderAdminList);
+  document.querySelector('[data-map-form]')?.addEventListener('submit', saveMap);
+  document.querySelector('[data-map-reset]')?.addEventListener('click', resetMapForm);
+  document.querySelector('[data-nade-form]')?.addEventListener('submit', saveEntry);
+  document.querySelector('[data-reset-form]')?.addEventListener('click', resetForm);
+  document.querySelector('[data-export-json]')?.addEventListener('click', exportJson);
+  document.querySelector('[data-import-json]')?.addEventListener('change', importJson);
+  document.querySelector('[data-admin-search]')?.addEventListener('input', renderAdminList);
+  document.querySelector('[data-video-files]')?.addEventListener('change', selectVideoFiles);
 })();
 
 function populateMaps(selectedValue = '') {
@@ -34,12 +35,18 @@ function populateMaps(selectedValue = '') {
   if (workingData.maps.some(map => map.slug === current)) select.value = current;
 }
 
+function getNamedField(name) {
+  return document.querySelector(`[name="${name}"]`);
+}
+
 function formValue(name) {
-  return document.querySelector(`[name="${name}"]`).value.trim();
+  const field = getNamedField(name);
+  return field ? String(field.value || '').trim() : '';
 }
 
 function mapFormValue(name) {
-  return document.querySelector(`[name="${name}"]`).value.trim();
+  const field = getNamedField(name);
+  return field ? String(field.value || '').trim() : '';
 }
 
 function saveMap(event) {
@@ -131,62 +138,137 @@ function renderMapList() {
 
 function saveEntry(event) {
   event.preventDefault();
-  const title = formValue('title');
-  const map = formValue('map');
-  const origin = formValue('origin');
-  const target = formValue('target');
-  const proposedId = formValue('id') || slugify(`${map}-${origin}-${target}-${formValue('type')}`);
-  const duplicate = workingData.nades.some(n => n.id === proposedId && n.id !== editingId);
-  if (duplicate) return toast('Ese ID ya existe');
 
-  const existing = workingData.nades.find(n => n.id === editingId);
-  const mapRecord = workingData.maps.find(item => item.slug === map);
-  const entry = {
-    id: proposedId,
-    title,
-    map,
-    type: formValue('type'),
-    team: formValue('team'),
-    origin,
-    target,
-    difficulty: formValue('difficulty'),
-    throw: formValue('throw'),
-    movement: formValue('movement'),
-    precision: formValue('precision'),
-    setpos: formValue('setpos'),
-    videoUrl: formValue('videoUrl'),
-    thumbnail: formValue('thumbnail') || mapRecord?.image || '',
-    description: formValue('description'),
-    steps: formValue('steps').split('\n').map(x => x.trim()).filter(Boolean),
-    tags: formValue('tags').split(',').map(x => x.trim()).filter(Boolean),
-    featured: document.querySelector('[name="featured"]').checked,
-    published: document.querySelector('[name="published"]').checked,
-    createdAt: existing?.createdAt || new Date().toISOString().slice(0, 10)
-  };
+  try {
+    if (!workingData || !Array.isArray(workingData.nades)) {
+      throw new Error('Los datos todavía no se han cargado.');
+    }
 
-  if (editingId) {
-    const index = workingData.nades.findIndex(n => n.id === editingId);
-    workingData.nades[index] = entry;
-    toast('Lineup actualizada');
-  } else {
-    workingData.nades.unshift(entry);
-    toast('Lineup añadida');
+    const title = formValue('title');
+    const map = formValue('map');
+    const origin = formValue('origin');
+    const target = formValue('target');
+
+    if (!title || !map || !origin || !target) {
+      toast('Completa título, mapa, origen y destino');
+      showAdminError('Faltan campos obligatorios: título, mapa, origen o destino.');
+      return;
+    }
+
+    const proposedId =
+      formValue('id') ||
+      slugify(`${map}-${origin}-${target}-${formValue('type')}`);
+
+    if (!proposedId) {
+      throw new Error('No se pudo generar el ID de la lineup.');
+    }
+
+    const duplicate = workingData.nades.some(
+      nade => nade.id === proposedId && nade.id !== editingId
+    );
+
+    if (duplicate) {
+      toast('Ese ID ya existe');
+      showAdminError(`Ya existe una lineup con el ID "${proposedId}".`);
+      return;
+    }
+
+    const existing = workingData.nades.find(nade => nade.id === editingId);
+    const mapRecord = workingData.maps.find(item => item.slug === map);
+
+    let videos = parseVideoLines(formValue('videos'));
+
+    // Compatibilidad con el campo antiguo videoUrl.
+    if (!videos.length && formValue('videoUrl')) {
+      videos = [{
+        title: 'Vídeo 1',
+        url: formValue('videoUrl')
+      }];
+    }
+
+    const entry = {
+      id: proposedId,
+      title,
+      map,
+      type: formValue('type'),
+      team: formValue('team'),
+      origin,
+      target,
+      difficulty: formValue('difficulty'),
+      throw: formValue('throw'),
+      movement: formValue('movement'),
+      precision: formValue('precision'),
+      setpos: formValue('setpos'),
+      videos,
+      videoUrl: videos.length ? videos[0].url : '',
+      thumbnail: formValue('thumbnail') || (mapRecord ? mapRecord.image : ''),
+      description: formValue('description'),
+      steps: formValue('steps')
+        .split('\n')
+        .map(value => value.trim())
+        .filter(Boolean),
+      tags: formValue('tags')
+        .split(',')
+        .map(value => value.trim())
+        .filter(Boolean),
+      featured: Boolean(getNamedField('featured')?.checked),
+      published: Boolean(getNamedField('published')?.checked),
+      createdAt: existing?.createdAt || new Date().toISOString().slice(0, 10)
+    };
+
+    if (editingId) {
+      const index = workingData.nades.findIndex(nade => nade.id === editingId);
+
+      if (index === -1) {
+        throw new Error('No se encontró la lineup que estabas editando.');
+      }
+
+      workingData.nades[index] = entry;
+      toast('Lineup actualizada');
+    } else {
+      workingData.nades.unshift(entry);
+      toast('Lineup añadida');
+    }
+
+    renderAdminList();
+    renderMapList();
+    markPending();
+
+    const status = document.querySelector('[data-admin-status]');
+    if (status) {
+      status.textContent =
+        `Cambios guardados en el editor: ${videos.length} vídeo${videos.length === 1 ? '' : 's'}. Ahora pulsa Exportar JSON.`;
+    }
+
+    resetForm();
+  } catch (error) {
+    console.error('Error al guardar la lineup:', error);
+    toast(`No se pudo guardar: ${error.message}`);
+    showAdminError(error.message);
   }
-  resetForm();
-  renderAdminList();
-  renderMapList();
-  markPending();
 }
 
 function editEntry(id) {
   const entry = workingData.nades.find(n => n.id === id);
   if (!entry) return;
   editingId = id;
-  const fields = ['id','title','map','type','team','origin','target','difficulty','throw','movement','precision','setpos','videoUrl','thumbnail','description'];
+  const fields = ['id','title','map','type','team','origin','target','difficulty','throw','movement','precision','setpos','thumbnail','description'];
   fields.forEach(name => {
     const el = document.querySelector(`[name="${name}"]`);
     if (el) el.value = entry[name] || '';
   });
+  const normalizedVideos = normalizeVideos(entry.videos, entry.videoUrl);
+  const videosField = getNamedField('videos');
+  const legacyVideoField = getNamedField('videoUrl');
+
+  if (videosField) {
+    videosField.value = serializeVideoLines(normalizedVideos);
+  }
+
+  if (legacyVideoField) {
+    legacyVideoField.value = normalizedVideos[0]?.url || '';
+  }
+
   document.querySelector('[name="steps"]').value = (entry.steps || []).join('\n');
   document.querySelector('[name="tags"]').value = (entry.tags || []).join(', ');
   document.querySelector('[name="featured"]').checked = Boolean(entry.featured);
@@ -211,15 +293,23 @@ function resetForm() {
   editingId = null;
   const form = document.querySelector('[data-nade-form]');
   form.reset();
-  document.querySelector('[name="published"]').checked = true;
-  document.querySelector('[name="type"]').value = 'smoke';
+  const publishedField = getNamedField('published');
+  const typeField = getNamedField('type');
+  const legacyVideoField = getNamedField('videoUrl');
+
+  if (publishedField) publishedField.checked = true;
+  if (typeField) typeField.value = 'smoke';
+  if (legacyVideoField) legacyVideoField.value = '';
   document.querySelector('[data-form-title]').textContent = 'Nueva lineup';
   document.querySelector('[data-save-label]').textContent = 'Añadir lineup';
 }
 
 function renderAdminList() {
   if (!workingData) return;
-  const query = document.querySelector('[data-admin-search]').value.trim().toLowerCase();
+  const searchField = document.querySelector('[data-admin-search]');
+  const query = searchField
+    ? searchField.value.trim().toLowerCase()
+    : '';
   const items = workingData.nades.filter(n => !query || [n.title,n.map,n.origin,n.target,n.type].join(' ').toLowerCase().includes(query));
   document.querySelector('[data-admin-count]').textContent = `${workingData.nades.length} entradas`;
   document.querySelector('[data-admin-items]').innerHTML = items.map(n => `
@@ -233,6 +323,106 @@ function renderAdminList() {
         <button class="small-btn" type="button" onclick="deleteEntry('${escapeJs(n.id)}')">Eliminar</button>
       </div>
     </div>`).join('') || '<div class="empty">No hay resultados.</div>';
+}
+
+
+function selectVideoFiles(event) {
+  const files = Array.from(event.target.files || []);
+  if (!files.length) return;
+
+  const textarea = document.querySelector('[name="videos"]');
+  const currentLines = textarea.value
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const selectedMap = formValue('map') || 'mapa';
+  const additions = files.map(file => {
+    const safeName = sanitizeFileName(file.name);
+    const title = titleFromFileName(safeName);
+    return `${title} | assets/videos/${selectedMap}/${safeName}`;
+  });
+
+  textarea.value = [...currentLines, ...additions].join('\n');
+  document.querySelector('[data-video-files-help]').textContent =
+    `${files.length} ${files.length === 1 ? 'vídeo añadido' : 'vídeos añadidos'}. Copia los archivos a assets/videos/${selectedMap}/.`;
+
+  event.target.value = '';
+  markPending();
+}
+
+function normalizeVideos(videos, legacyVideoUrl = '') {
+  const source = Array.isArray(videos) ? videos : [];
+
+  const normalized = source.map((video, index) => {
+    if (typeof video === 'string') {
+      const url = video.trim();
+      return url ? { title: `Vídeo ${index + 1}`, url } : null;
+    }
+
+    if (!video || typeof video !== 'object') return null;
+
+    const url = String(video.url || video.videoUrl || '').trim();
+    if (!url) return null;
+
+    return {
+      title: String(video.title || `Vídeo ${index + 1}`).trim(),
+      url
+    };
+  }).filter(Boolean);
+
+  const legacy = String(legacyVideoUrl || '').trim();
+  if (!normalized.length && legacy) {
+    normalized.push({ title: 'Vídeo 1', url: legacy });
+  }
+
+  return normalized;
+}
+
+function parseVideoLines(value) {
+  return String(value || '')
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean)
+    .map((line, index) => {
+      const separator = line.indexOf('|');
+
+      if (separator === -1) {
+        return {
+          title: `Vídeo ${index + 1}`,
+          url: line
+        };
+      }
+
+      const title = line.slice(0, separator).trim() || `Vídeo ${index + 1}`;
+      const url = line.slice(separator + 1).trim();
+
+      return url ? { title, url } : null;
+    })
+    .filter(Boolean);
+}
+
+function serializeVideoLines(videos) {
+  return normalizeVideos(videos)
+    .map((video, index) => `${video.title || `Vídeo ${index + 1}`} | ${video.url}`)
+    .join('\n');
+}
+
+function sanitizeFileName(fileName) {
+  const name = String(fileName || '').trim();
+  const dot = name.lastIndexOf('.');
+  const base = dot > 0 ? name.slice(0, dot) : name;
+  const extension = dot > 0 ? name.slice(dot).toLowerCase() : '';
+  return `${slugify(base) || 'video'}${extension}`;
+}
+
+function titleFromFileName(fileName) {
+  const base = String(fileName || '').replace(/\.[^.]+$/, '');
+  return base
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ') || 'Vídeo';
 }
 
 function exportJson() {
@@ -285,8 +475,33 @@ function validateImportedData(data) {
   });
 }
 
+
+function showAdminError(message) {
+  const status = document.querySelector('[data-admin-status]');
+  if (!status) return;
+
+  status.textContent = `Error al guardar: ${message}`;
+  status.classList.add('admin-status-error');
+}
+
+window.addEventListener('error', event => {
+  const message = event.error?.message || event.message || 'Error de JavaScript';
+  console.error(event.error || event);
+  showAdminError(message);
+});
+
+window.addEventListener('unhandledrejection', event => {
+  const message = event.reason?.message || String(event.reason || 'Error inesperado');
+  console.error(event.reason);
+  showAdminError(message);
+});
+
 function markPending() {
-  document.querySelector('[data-admin-status]').textContent = 'Cambios pendientes de exportar y subir a GitHub.';
+  const status = document.querySelector('[data-admin-status]');
+  if (!status) return;
+
+  status.classList.remove('admin-status-error');
+  status.textContent = 'Cambios pendientes de exportar y subir a GitHub.';
 }
 
 function slugify(text) {

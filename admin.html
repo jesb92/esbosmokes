@@ -7,6 +7,7 @@
   <title>Editor de contenido · EsboSmokes</title>
   <link rel="icon" href="assets/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nade-multiple-videos.css">
 </head>
 <body>
   <div data-site-header></div>
@@ -69,7 +70,22 @@
               <div class="form-field"><label for="throw">Lanzamiento</label><input class="input" id="throw" name="throw" placeholder="jumpthrow"></div>
               <div class="form-field"><label for="movement">Movimiento</label><input class="input" id="movement" name="movement" placeholder="quieto"></div>
               <div class="form-field"><label for="precision">Precisión</label><select id="precision" name="precision"><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option></select></div>
-              <div class="form-field full"><label for="videoUrl">Vídeo: MP4, WebM o YouTube</label><input class="input" id="videoUrl" name="videoUrl" type="text" placeholder="assets/videos/mi-video.mp4 o https://youtu.be/..."><small class="form-help">Para MP4, añade primero el archivo a <strong>assets/videos/</strong> en el repositorio.</small></div>
+              <div class="form-field full">
+  <label for="videos">Vídeos, uno por línea</label>
+  <textarea id="videos" name="videos" rows="6" placeholder="Spawn 1 | assets/videos/mirage/spawn-1.mp4&#10;Spawn 2 | assets/videos/mirage/spawn-2.mp4&#10;Vista alternativa | https://youtu.be/..."></textarea>
+  <small class="form-help">
+    Escribe <strong>Título | ruta</strong>, o solamente la ruta. Acepta MP4, WebM, OGG y YouTube.
+  </small>
+</div>
+<div class="form-field full media-picker-row">
+  <div class="admin-actions media-picker-actions">
+    <label class="btn" for="nade-video-files">Elegir varios vídeos</label>
+    <input id="nade-video-files" data-video-files type="file" accept="video/mp4,video/webm,video/ogg" multiple hidden>
+  </div>
+  <small class="form-help" data-video-files-help>
+    El selector añade rutas del tipo <strong>assets/videos/mapa/archivo.mp4</strong>. Después debes copiar físicamente los vídeos a esa carpeta.
+  </small>
+</div>
               <div class="form-field full"><label for="thumbnail">Miniatura</label><input class="input" id="thumbnail" name="thumbnail" placeholder="assets/maps/mirage.svg"></div>
               <div class="form-field full"><label for="setpos">Comando setpos</label><input class="input" id="setpos" name="setpos" placeholder="setpos ...; setang ..."></div>
               <div class="form-field full"><label for="description">Descripción</label><textarea id="description" name="description" rows="3" placeholder="Qué cubre y cuándo utilizarla."></textarea></div>

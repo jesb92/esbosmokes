@@ -153,16 +153,17 @@
                 </div>
 
                 <div class="form-field full">
-                  <label for="execute-video">Ruta de vídeo MP4, WebM o YouTube</label>
-                  <input class="input" id="execute-video" name="videoUrl" placeholder="assets/videos/mirage-a.mp4 o https://youtu.be/…">
+                  <label for="execute-videos">Vídeos, uno por línea</label>
+                  <textarea id="execute-videos" name="videos" rows="6" placeholder="Spawn 1 | assets/videos/mirage/spawn-1.mp4&#10;Spawn 2 | assets/videos/mirage/spawn-2.mp4&#10;YouTube | https://youtu.be/…"></textarea>
+                  <small class="form-help">Puedes escribir solo la ruta o usar <strong>Título | ruta</strong>. Acepta MP4, WebM y YouTube.</small>
                 </div>
 
                 <div class="form-field full media-picker-row">
                   <div>
-                    <label class="btn" for="execute-video-file">Elegir vídeo del ordenador</label>
-                    <input id="execute-video-file" data-video-file type="file" accept="video/mp4,video/webm,video/ogg" hidden>
+                    <label class="btn" for="execute-video-files">Elegir varios vídeos</label>
+                    <input id="execute-video-files" data-video-files type="file" accept="video/mp4,video/webm,video/ogg" multiple hidden>
                   </div>
-                  <small class="form-help" data-video-file-help>El selector rellena assets/videos/nombre-del-archivo; después copia el vídeo a esa carpeta.</small>
+                  <small class="form-help" data-video-files-help>Selecciona uno o varios archivos. Se añadirán como rutas; después copia los vídeos a assets/videos/.</small>
                 </div>
 
                 <div class="form-field full">

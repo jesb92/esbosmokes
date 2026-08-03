@@ -39,7 +39,7 @@ function bindExecuteAdminEvents() {
   document.querySelector('[data-execute-export-bottom]').addEventListener('click', exportExecutes);
   document.querySelector('[data-execute-import]').addEventListener('change', importExecutes);
   document.querySelector('[data-thumbnail-file]').addEventListener('change', selectThumbnailFile);
-  document.querySelector('[data-video-file]').addEventListener('change', selectVideoFile);
+  document.querySelector('[data-video-files]').addEventListener('change', selectVideoFiles);
 }
 
 function normalizeExecuteData(raw) {
@@ -102,6 +102,8 @@ function normalizeExecuteData(raw) {
     const original = String(item.map || '').trim();
     const resolved = mapByName.get(original.toLowerCase()) || slugify(original);
     item.map = resolved;
+    item.videos = normalizeVideos(item.videos, item.videoUrl);
+    delete item.videoUrl;
   });
 
   return { maps, executes };
@@ -271,7 +273,7 @@ function saveExecute(event) {
     site: String(values.get('site') || '').trim(),
     difficulty: String(values.get('difficulty') || 'media'),
     thumbnail: String(values.get('thumbnail') || '').trim(),
-    videoUrl: String(values.get('videoUrl') || '').trim(),
+    videos: parseVideoLines(values.get('videos')),
     gallery: lines(values.get('gallery')),
     description: String(values.get('description') || '').trim(),
     steps: lines(values.get('steps')),
@@ -390,7 +392,7 @@ function fillForm(item) {
   form.elements.site.value = item.site || '';
   form.elements.difficulty.value = item.difficulty || 'media';
   form.elements.thumbnail.value = item.thumbnail || '';
-  form.elements.videoUrl.value = item.videoUrl || '';
+  form.elements.videos.value = serializeVideoLines(normalizeVideos(item.videos, item.videoUrl));
   form.elements.gallery.value = (item.gallery || []).join('\n');
   form.elements.description.value = item.description || '';
   form.elements.steps.value = (item.steps || []).join('\n');
@@ -466,14 +468,23 @@ function selectThumbnailFile(event) {
   renderCardPreview();
 }
 
-function selectVideoFile(event) {
-  const file = event.target.files?.[0];
-  if (!file) return;
+function selectVideoFiles(event) {
+  const files = Array.from(event.target.files || []);
+  if (!files.length) return;
 
-  const safeName = sanitizeFileName(file.name);
-  const path = `assets/videos/${safeName}`;
-  document.querySelector('[name="videoUrl"]').value = path;
-  document.querySelector('[data-video-file-help]').textContent = `Ruta sugerida: ${path}. Copia el archivo a assets/videos/.`;
+  const textarea = document.querySelector('[name="videos"]');
+  const current = lines(textarea.value);
+  const additions = files.map(file => {
+    const safeName = sanitizeFileName(file.name);
+    const path = `assets/videos/${safeName}`;
+    const title = titleFromSlug(safeName.replace(/\.[^.]+$/, ''));
+    return `${title} | ${path}`;
+  });
+
+  textarea.value = [...current, ...additions].join('\n');
+  document.querySelector('[data-video-files-help]').textContent = `${files.length} ${files.length === 1 ? 'vídeo añadido' : 'vídeos añadidos'}. Copia los archivos a assets/videos/.`;
+  event.target.value = '';
+  renderCardPreview();
 }
 
 function clearPreviewObjectUrl() {
@@ -488,6 +499,51 @@ function sanitizeFileName(name) {
   const base = dot > 0 ? name.slice(0, dot) : name;
   const extension = dot > 0 ? name.slice(dot).toLowerCase() : '';
   return `${slugify(base) || 'archivo'}${extension}`;
+}
+
+function normalizeVideos(videos, legacyVideoUrl = '') {
+  const source = Array.isArray(videos) ? videos : [];
+  const normalized = source.map((video, index) => {
+    if (typeof video === 'string') {
+      const url = video.trim();
+      return url ? { title: `Vídeo ${index + 1}`, url } : null;
+    }
+
+    if (!video || typeof video !== 'object') return null;
+    const url = String(video.url || video.videoUrl || '').trim();
+    if (!url) return null;
+
+    return {
+      title: String(video.title || `Vídeo ${index + 1}`).trim(),
+      url
+    };
+  }).filter(Boolean);
+
+  const legacy = String(legacyVideoUrl || '').trim();
+  if (!normalized.length && legacy) {
+    normalized.push({ title: 'Vídeo 1', url: legacy });
+  }
+
+  return normalized;
+}
+
+function parseVideoLines(value) {
+  return lines(value).map((line, index) => {
+    const separator = line.indexOf('|');
+    if (separator === -1) {
+      return { title: `Vídeo ${index + 1}`, url: line.trim() };
+    }
+
+    const title = line.slice(0, separator).trim() || `Vídeo ${index + 1}`;
+    const url = line.slice(separator + 1).trim();
+    return url ? { title, url } : null;
+  }).filter(Boolean);
+}
+
+function serializeVideoLines(videos) {
+  return normalizeVideos(videos)
+    .map((video, index) => `${video.title || `Vídeo ${index + 1}`} | ${video.url}`)
+    .join('\n');
 }
 
 function exportExecutes() {

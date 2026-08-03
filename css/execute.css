@@ -147,3 +147,22 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Varios vídeos por tarjeta Execute */
+.execute-video-heading {
+  margin-bottom: 14px;
+}
+
+.execute-video-list {
+  display: grid;
+  gap: 22px;
+}
+
+.execute-video-item {
+  min-width: 0;
+}
+
+.execute-video-item h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}

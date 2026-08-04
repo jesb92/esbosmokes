@@ -67,16 +67,22 @@
     },
     {
       "id": "mirage-a-execute",
-      "title": "Execute de A en Mirage",
+      "title": "Execute de A",
       "map": "mirage",
       "site": "A",
       "difficulty": "media",
       "thumbnail": "assets/executes/mirage/a.jpg",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/video-prueba-lineup.mp4"
+        }
+      ],
       "gallery": [
         "assets/executes/mirage-a-1.svg",
         "assets/executes/mirage-a-2.svg"
       ],
-      "description": "Ejemplo de entrada coordinada a A con smokes, flash y molotov.",
+      "description": "",
       "steps": [
         "El primer jugador lanza la smoke de CT.",
         "El segundo jugador bloquea jungle o conector.",
@@ -89,13 +95,7 @@
         "entrada"
       ],
       "published": true,
-      "createdAt": "2026-08-02",
-      "videos": [
-        {
-          "title": "Vídeo 1",
-          "url": "assets/videos/video-prueba-lineup.mp4"
-        }
-      ]
+      "createdAt": "2026-08-02"
     }
   ]
 }

@@ -72,10 +72,10 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/video/maps/mirage/jungesca.mp4"
+          "url": "assets/videos/maps/mirage/jungesca.mp4"
         }
       ],
-      "videoUrl": "assets/video/maps/mirage/jungesca.mp4",
+      "videoUrl": "assets/videos/maps/mirage/jungesca.mp4",
       "thumbnail": "assets/maps/mapas/mirage/jungesca.jpg",
       "description": "",
       "steps": [],

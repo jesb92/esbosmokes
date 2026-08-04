@@ -57,6 +57,42 @@
   ],
   "nades": [
     {
+      "id": "anubis-t-spawn-site-b-smoke",
+      "title": "Smokes B - 1 Posicion",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Site B",
+      "difficulty": "media",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "CT",
+          "url": "assets/videos/maps/anubis/ct.mp4"
+        },
+        {
+          "title": "Ninja",
+          "url": "assets/videos/maps/anubis/ninja.mp4"
+        },
+        {
+          "title": "Connector",
+          "url": "assets/videos/maps/anubis/connector.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/ct.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/siteb.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
       "id": "mirage-aguas-site-a-smoke",
       "title": "Molo Site A",
       "map": "anubis",
@@ -76,7 +112,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/moloa.mp4",
-      "thumbnail": "assets/maps/maps/anubis/moloa.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/moloa.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -104,7 +140,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/heaven.mp4",
-      "thumbnail": "assets/maps/maps/anubis/heaven.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/heaven.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -132,7 +168,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/connector.mp4",
-      "thumbnail": "assets/maps/maps/anubis/connector.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/connector.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -143,7 +179,7 @@
     {
       "id": "anubis-aguas-cajas-b-smoke",
       "title": "Smoke Caja B",
-      "map": "anubis",
+      "map": "ancient",
       "type": "smoke",
       "team": "T",
       "origin": "Aguas",
@@ -160,7 +196,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/caja.mp4",
-      "thumbnail": "assets/maps/maps/anubis/caja.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/caja.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -188,7 +224,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/roto.mp4",
-      "thumbnail": "assets/maps/maps/ancient/roto.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/roto.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -216,7 +252,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/molo_azul.mp4",
-      "thumbnail": "assets/maps/maps/ancient/moloazul.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/moloazul.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -244,7 +280,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/corta.mp4",
-      "thumbnail": "assets/maps/maps/ancient/corta.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/corta.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -272,7 +308,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/larga.mp4",
-      "thumbnail": "assets/maps/maps/ancient/larga.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/larga.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -300,7 +336,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/ct.mp4",
-      "thumbnail": "assets/maps/maps/ancient/ct.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/ct.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -328,7 +364,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/donut.mp4",
-      "thumbnail": "assets/maps/maps/ancient/donut.jpg",
+      "thumbnail": "assets/maps/mapas/ancient/donut.jpg",
       "description": "",
       "steps": [],
       "tags": [],

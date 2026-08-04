@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "mirage-t-spaw-jungla-escalera-smoke",
+      "title": "Smoke Jungla Escalera",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spaw",
+      "target": "Jungla - Escalera",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/video/maps/mirage/jungesca.mp4"
+        }
+      ],
+      "videoUrl": "assets/video/maps/mirage/jungesca.mp4",
+      "thumbnail": "assets/maps/maps/mirage/jungesca.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
       "id": "anubis-t-spawn-site-b-smoke",
       "title": "Smokes B - 1 Posicion",
       "map": "anubis",

@@ -3,13 +3,13 @@
     {
       "slug": "mirage",
       "name": "Mirage",
-      "image": "assets/maps/cards/ancient.png",
+      "image": "assets/maps/ancient.png",
       "description": "Executes coordinados para Mirage."
     },
     {
       "slug": "dust2",
       "name": "Dust 2",
-      "image": "assets/maps/cards/dust2.png",
+      "image": "assets/maps/dust2.png",
       "description": ""
     },
     {

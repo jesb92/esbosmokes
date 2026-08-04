@@ -115,7 +115,7 @@
     {
       "id": "mirage-kats-corta-smoke",
       "title": "Smoke Corta B - Kats",
-      "map": "mirage",
+      "map": "ancient",
       "type": "smoke",
       "team": "T",
       "origin": "Kats",

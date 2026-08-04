@@ -11,6 +11,12 @@
       "name": "Dust 2",
       "image": "assets/maps/cards/dust2.png",
       "description": ""
+    },
+    {
+      "slug": "inferno",
+      "name": "Inferno",
+      "image": "assets/maps/inferno.png",
+      "description": ""
     }
   ],
   "executes": [
@@ -21,13 +27,13 @@
       "site": "T spawn > Mid > A",
       "difficulty": "media",
       "thumbnail": "assets/executes/mirage/midtoa.jpg",
-      "videoUrl": "",
       "gallery": [],
       "description": "",
       "steps": [],
       "tags": [],
       "published": true,
-      "createdAt": "2026-08-02"
+      "createdAt": "2026-08-02",
+      "videos": []
     },
     {
       "id": "mirage-a-execute",
@@ -36,7 +42,6 @@
       "site": "A",
       "difficulty": "media",
       "thumbnail": "assets/executes/mirage/a.jpg",
-      "videoUrl": "assets/videos/video-prueba-lineup.mp4",
       "gallery": [
         "assets/executes/mirage-a-1.svg",
         "assets/executes/mirage-a-2.svg"
@@ -54,7 +59,13 @@
         "entrada"
       ],
       "published": true,
-      "createdAt": "2026-08-02"
+      "createdAt": "2026-08-02",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/video-prueba-lineup.mp4"
+        }
+      ]
     }
   ]
 }

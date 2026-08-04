@@ -76,7 +76,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/roto.mp4",
-      "thumbnail": "assets/maps/ancient.png",
+      "thumbnail": "assets/maps/maps/ancient/roto.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -104,7 +104,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/molo_azul.mp4",
-      "thumbnail": "assets/maps/ancient.png",
+      "thumbnail": "assets/maps/maps/ancient/moloazul.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -132,7 +132,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/corta.mp4",
-      "thumbnail": "assets/maps/mirage.png",
+      "thumbnail": "assets/maps/maps/ancient/corta.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -160,7 +160,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/larga.mp4",
-      "thumbnail": "assets/maps/mirage.png",
+      "thumbnail": "assets/maps/maps/ancient/larga.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -188,7 +188,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/ct.mp4",
-      "thumbnail": "assets/maps/ancient.png",
+      "thumbnail": "assets/maps/maps/ancient/ct.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -216,7 +216,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/ancient/donut.mp4",
-      "thumbnail": "assets/maps/ancient.png",
+      "thumbnail": "assets/maps/maps/ancient/donut.jpg",
       "description": "",
       "steps": [],
       "tags": [],

@@ -21,6 +21,36 @@
   ],
   "executes": [
     {
+      "id": "execute-a",
+      "title": "Execute A",
+      "map": "mirage",
+      "site": "A",
+      "difficulty": "media",
+      "thumbnail": "assets/executes/inferno/executea.jpg",
+      "videos": [],
+      "gallery": [],
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "execute-b",
+      "title": "Execute B",
+      "map": "inferno",
+      "site": "B",
+      "difficulty": "media",
+      "thumbnail": "assets/executes/inferno/executeb.jpg",
+      "videos": [],
+      "gallery": [],
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
       "id": "mid-to-a",
       "title": "Mid to A",
       "map": "mirage",

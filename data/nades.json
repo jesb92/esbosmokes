@@ -72,7 +72,7 @@
       "videos": [
         {
           "title": "CT",
-          "url": "assets/videos/maps/anubis/ct.mp4"
+          "url": "assets/videos/maps/anubis/ninjact.mp4"
         },
         {
           "title": "Ninja",
@@ -80,10 +80,10 @@
         },
         {
           "title": "Connector",
-          "url": "assets/videos/maps/anubis/connector.mp4"
+          "url": "assets/videos/maps/anubis/connectorb.mp4"
         }
       ],
-      "videoUrl": "assets/videos/maps/anubis/ct.mp4",
+      "videoUrl": "assets/videos/maps/anubis/ninjact.mp4",
       "thumbnail": "assets/maps/mapas/anubis/siteb.jpg",
       "description": "",
       "steps": [],

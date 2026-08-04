@@ -57,6 +57,118 @@
   ],
   "nades": [
     {
+      "id": "mirage-aguas-site-a-smoke",
+      "title": "Molo Site A",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Site A",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/moloa.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/moloa.mp4",
+      "thumbnail": "assets/maps/maps/anubis/moloa.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "mirage-aguas-heaven-smoke",
+      "title": "Smoke Heaven",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Heaven",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/heaven.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/heaven.mp4",
+      "thumbnail": "assets/maps/maps/anubis/heaven.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "mirage-t-spawn-connector-smoke",
+      "title": "Smoke Connector - T Spawn",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Connector",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/connector.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/connector.mp4",
+      "thumbnail": "assets/maps/maps/anubis/connector.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "anubis-aguas-cajas-b-smoke",
+      "title": "Smoke Caja B",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Cajas B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/caja.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/caja.mp4",
+      "thumbnail": "assets/maps/maps/anubis/caja.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
       "id": "ancient-larga-roto-a-smoke",
       "title": "Smoke Roto A - Larga",
       "map": "ancient",

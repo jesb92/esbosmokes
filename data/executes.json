@@ -27,8 +27,16 @@
       "site": "Mid",
       "difficulty": "media",
       "thumbnail": "assets/executes/inferno/midtob.jpg",
-      "videos": [],
-      "gallery": [],
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/executes/inferno/midtob.mp4"
+        }
+      ],
+      "gallery": [
+        "assets/executes/inferno/molo2.jpg",
+        "assets/executes/inferno/molooscuro.jpg"
+      ],
       "description": "",
       "steps": [],
       "tags": [],

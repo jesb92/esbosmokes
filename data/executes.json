@@ -7,12 +7,6 @@
       "description": "Executes coordinados para Mirage."
     },
     {
-      "slug": "dust2",
-      "name": "Dust 2",
-      "image": "assets/maps/dust2.png",
-      "description": ""
-    },
-    {
       "slug": "inferno",
       "name": "Inferno",
       "image": "assets/maps/inferno.png",

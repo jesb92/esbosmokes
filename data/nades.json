@@ -57,6 +57,90 @@
   ],
   "nades": [
     {
+      "id": "mirage-tele-ventan-cocina-smoke",
+      "title": "Smoke Ventana Cocina",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Ventan Cocina",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/ventanacocina.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/ventanacocina.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/ventanacocina.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-tele-corta-smoke",
+      "title": "Smoke Corta",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Corta",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/corta.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/corta.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/corta.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-tele-puerta-cocina-smoke",
+      "title": "Smoke Puerta Cocina",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Puerta Cocina",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/puertacocina.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/puertacocina.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/puertacocina.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
       "id": "mirage-t-spaw-jungla-escalera-smoke",
       "title": "Smoke Jungla Escalera",
       "map": "mirage",

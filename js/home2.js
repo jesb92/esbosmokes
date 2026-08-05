@@ -9,12 +9,10 @@
     document.querySelector('[data-total-featured]').textContent = published.filter(n => n.featured).length;*/
 
     const mapGrid = document.querySelector('[data-map-grid]');
-    mapGrid.innerHTML = data.maps.map(map => {
-      const items = published.filter(n => n.map === map.slug);
-      const counts = ['smoke', 'molotov', 'flash', 'he'].map(type => {
-        const count = items.filter(n => n.type === type).length;
-        return `<span class="type-pill">${TYPE_ICONS[type]} ${TYPE_LABELS[type]} ${count}</span>`;
-      }).join('');
+      mapGrid.innerHTML = sortedMaps.map(map => {
+      const sortedMaps = [...data.maps].sort(
+      (a, b) => (a.order ?? 9999) - (b.order ?? 9999));
+    }).join('');
       return `
         <a class="card map-card" href="map.html?map=${encodeURIComponent(map.slug)}">
           <img src="${escapeAttr(map.image)}" alt="Mapa ${escapeAttr(map.name)}">

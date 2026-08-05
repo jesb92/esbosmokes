@@ -59,7 +59,7 @@ function saveMap(event) {
   const duplicate = workingData.maps.some(map => map.slug === slug && map.slug !== editingMapSlug);
   if (duplicate) return toast('Ese slug ya existe');
 
-  const map = { slug, name, image, description, order: Number(existing?.order ?? workingData.maps.length + 1) };
+  const map = { slug, name, image, description };
   if (editingMapSlug) {
     const index = workingData.maps.findIndex(item => item.slug === editingMapSlug);
     if (index === -1) return;

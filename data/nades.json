@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "smoke-connect-t-spawn-mirage",
+      "title": "Smoke Connector - T Spawn",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Connector",
+      "difficulty": "media",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/connector.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/connector.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/connector.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
       "id": "mirage-tele-ventan-cocina-smoke",
       "title": "Smoke Ventana Cocina",
       "map": "mirage",

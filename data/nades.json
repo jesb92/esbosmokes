@@ -7,15 +7,15 @@
   },
   "maps": [
     {
-      "slug": "inferno",
-      "name": "Inferno",
-      "image": "assets/maps/inferno.png",
-      "description": ""
-    },
-    {
       "slug": "mirage",
       "name": "Mirage",
       "image": "assets/maps/mirage.png",
+      "description": ""
+    },
+    {
+      "slug": "inferno",
+      "name": "Inferno",
+      "image": "assets/maps/inferno.png",
       "description": ""
     },
     {
@@ -56,6 +56,62 @@
     }
   ],
   "nades": [
+    {
+      "id": "cache-azul-caja-site-smoke",
+      "title": "Smoke Caja Site B",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Azul",
+      "target": "Caja Site",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/cajasite.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/cajasite.mp4",
+      "thumbnail": "assets/maps/mapas/cache/cajasite.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "cache-azul-toro-smoke",
+      "title": "Smoke Toro desde Azul",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Azul",
+      "target": "Toro",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/toro.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/toro.mp4",
+      "thumbnail": "assets/maps/mapas/cache/toro.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
     {
       "id": "smoke-connect-t-spawn-mirage",
       "title": "Smoke Connector - T Spawn",

@@ -9,10 +9,9 @@
     document.querySelector('[data-total-featured]').textContent = published.filter(n => n.featured).length;*/
 
     const mapGrid = document.querySelector('[data-map-grid]');
-    mapGrid.innerHTML = data.maps.map(map => {
+      mapGrid.innerHTML = sortedMaps.map(map => {
       const sortedMaps = [...data.maps].sort(
       (a, b) => (a.order ?? 9999) - (b.order ?? 9999));
-      mapGrid.innerHTML = sortedMaps.map(map => {
     }).join('');
       return `
         <a class="card map-card" href="map.html?map=${encodeURIComponent(map.slug)}">

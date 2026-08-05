@@ -7,15 +7,15 @@
   },
   "maps": [
     {
-      "slug": "mirage",
-      "name": "Mirage",
-      "image": "assets/maps/mirage.png",
-      "description": ""
-    },
-    {
       "slug": "inferno",
       "name": "Inferno",
       "image": "assets/maps/inferno.png",
+      "description": ""
+    },
+    {
+      "slug": "mirage",
+      "name": "Mirage",
+      "image": "assets/maps/mirage.png",
       "description": ""
     },
     {

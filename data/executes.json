@@ -21,6 +21,21 @@
   ],
   "executes": [
     {
+      "id": "mid-to-b",
+      "title": "Mid to B",
+      "map": "inferno",
+      "site": "Mid",
+      "difficulty": "media",
+      "thumbnail": "assets/executes/inferno/midtob.jpg",
+      "videos": [],
+      "gallery": [],
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
       "id": "execute-a",
       "title": "Execute A",
       "map": "inferno",

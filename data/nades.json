@@ -25,33 +25,33 @@
       "description": ""
     },
     {
-      "slug": "nuke",
-      "name": "Nuke",
-      "image": "assets/maps/nuke.png",
-      "description": ""
-    },
-    {
-      "slug": "dust2",
-      "name": "Dust 2",
-      "image": "assets/maps/dust2.png",
-      "description": ""
-    },
-    {
       "slug": "anubis",
       "name": "Anubis",
       "image": "assets/maps/anubis.png",
       "description": ""
     },
     {
-      "slug": "overpass",
-      "name": "Overpass",
-      "image": "assets/maps/overpass.png",
-      "description": ""
-    },
-    {
       "slug": "cache",
       "name": "Cache",
       "image": "assets/maps/cache.png",
+      "description": ""
+    },
+    {
+      "slug": "dust2",
+      "name": "Dust 2",
+      "image": "assets/maps/cards/dust2.png",
+      "description": ""
+    },
+    {
+      "slug": "nuke",
+      "name": "Nuke",
+      "image": "assets/maps/cards/nuke.png",
+      "description": ""
+    },
+    {
+      "slug": "overpass",
+      "name": "Overpass",
+      "image": "assets/maps/cards/overpass.png",
       "description": ""
     }
   ],

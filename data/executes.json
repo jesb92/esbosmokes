@@ -38,7 +38,12 @@
         "assets/executes/inferno/molooscuro.jpg"
       ],
       "description": "",
-      "steps": [],
+      "steps": [
+        "Jugador 1 - Lanza Corta",
+        "Jugador 2 - Lanza Larga profundo.",
+        "Jugadores 3-4-5 - Van secundaria > Larga > Arcos.",
+        "Jugadores 1 y 2 - Van Banana"
+      ],
       "tags": [],
       "published": true,
       "createdAt": "2026-08-05"

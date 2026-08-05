@@ -7,12 +7,6 @@
   },
   "maps": [
     {
-      "slug": "mirage",
-      "name": "Mirage",
-      "image": "assets/maps/mirage.png",
-      "description": "Lineups esenciales para controlar medio, A y B."
-    },
-    {
       "slug": "inferno",
       "name": "Inferno",
       "image": "assets/maps/inferno.png",
@@ -23,6 +17,24 @@
       "name": "Ancient",
       "image": "assets/maps/ancient.png",
       "description": "Granadas para medio, donut y ejecuciones coordinadas."
+    },
+    {
+      "slug": "cache",
+      "name": "Cache",
+      "image": "assets/maps/cache.png",
+      "description": "Lineups para mid, conector y control de A-B."
+    },
+    {
+      "slug": "mirage",
+      "name": "Mirage",
+      "image": "assets/maps/mirage.png",
+      "description": "Lineups esenciales para controlar medio, A y B."
+    },
+    {
+      "slug": "anubis",
+      "name": "Anubis",
+      "image": "assets/maps/anubis.png",
+      "description": "Utilidad para canal, medio y ejecuciones en ambos sites."
     },
     {
       "slug": "nuke",
@@ -36,23 +48,12 @@
       "image": "assets/maps/dust2.png",
       "description": "Smokes, flashes y molotovs para largo, medio y entradas a B."
     },
-    {
-      "slug": "anubis",
-      "name": "Anubis",
-      "image": "assets/maps/anubis.png",
-      "description": "Utilidad para canal, medio y ejecuciones en ambos sites."
-    },
+
     {
       "slug": "overpass",
       "name": "Overpass",
       "image": "assets/maps/overpass.png",
       "description": "Lineups para baños, conector, monster y control de A."
-    },
-    {
-      "slug": "cache",
-      "name": "Cache",
-      "image": "assets/maps/cache.png",
-      "description": "Lineups para mid, conector y control de A-B."
     }
   ],
   "nades": [

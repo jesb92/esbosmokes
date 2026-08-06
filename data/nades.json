@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "anubis-aguas-escaleras-smoke",
+      "title": "Smoke Escaleras A",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Escaleras",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/leras.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/leras.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/leras.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-06"
+    },
+    {
       "id": "cache-azul-caja-site-smoke",
       "title": "Smoke Caja Site B",
       "map": "cache",

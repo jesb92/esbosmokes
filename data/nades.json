@@ -416,11 +416,11 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/videos/maps/anubis/connector.mp4"
+          "url": "assets/videos/maps/anubis/connectorb.mp4"
         }
       ],
-      "videoUrl": "assets/videos/maps/anubis/connector.mp4",
-      "thumbnail": "assets/maps/mapas/anubis/connector.jpg",
+      "videoUrl": "assets/videos/maps/anubis/connectorb.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/connectorb.jpg",
       "description": "",
       "steps": [],
       "tags": [],

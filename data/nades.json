@@ -1,0 +1,911 @@
+{
+  "site": {
+    "name": "EsboSmokes",
+    "tagline": "Aprende y organiza tus granadas de CS2",
+    "language": "es",
+    "version": "2.0.0-github"
+  },
+  "maps": [
+    {
+      "slug": "mirage",
+      "name": "Mirage",
+      "image": "assets/maps/mirage.png",
+      "description": ""
+    },
+    {
+      "slug": "inferno",
+      "name": "Inferno",
+      "image": "assets/maps/inferno.png",
+      "description": ""
+    },
+    {
+      "slug": "ancient",
+      "name": "Ancient",
+      "image": "assets/maps/ancient.png",
+      "description": ""
+    },
+    {
+      "slug": "anubis",
+      "name": "Anubis",
+      "image": "assets/maps/anubis.png",
+      "description": ""
+    },
+    {
+      "slug": "cache",
+      "name": "Cache",
+      "image": "assets/maps/cache.png",
+      "description": ""
+    },
+    {
+      "slug": "dust2",
+      "name": "Dust 2",
+      "image": "assets/maps/dust2.png",
+      "description": ""
+    },
+    {
+      "slug": "nuke",
+      "name": "Nuke",
+      "image": "assets/maps/nuke.png",
+      "description": ""
+    },
+    {
+      "slug": "overpass",
+      "name": "Overpass",
+      "image": "assets/maps/overpass.png",
+      "description": ""
+    }
+  ],
+  "nades": [
+    {
+      "id": "anubis-aguas-escaleras-smoke",
+      "title": "Smoke Escaleras",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Escaleras",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/leras.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/leras.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/leras.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-06"
+    },
+    {
+      "id": "anubis-aguas-site-a-smoke",
+      "title": "Smokes A - 1 Posicion",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Site A",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/sitea.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/sitea.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/sitea.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-06"
+    },
+    {
+      "id": "cache-azul-caja-site-smoke",
+      "title": "Smoke Caja Site B",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Azul",
+      "target": "Caja Site",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/cajasite.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/cajasite.mp4",
+      "thumbnail": "assets/maps/mapas/cache/cajasite.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "cache-azul-toro-smoke",
+      "title": "Smoke Toro desde Azul",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Azul",
+      "target": "Toro",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/toro.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/toro.mp4",
+      "thumbnail": "assets/maps/mapas/cache/toro.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "smoke-connect-t-spawn-mirage",
+      "title": "Smoke Connector - T Spawn",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Connector",
+      "difficulty": "media",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/connector.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/connector.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/connector.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-tele-ventan-cocina-smoke",
+      "title": "Smoke Ventana Cocina",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Ventan Cocina",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/ventanacocina.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/ventanacocina.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/ventanacocina.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-tele-corta-smoke",
+      "title": "Smoke Corta",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Corta",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/corta.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/corta.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/corta.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-tele-puerta-cocina-smoke",
+      "title": "Smoke Puerta Cocina",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Tele",
+      "target": "Puerta Cocina",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/puertacocina.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/puertacocina.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/puertacocina.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-05"
+    },
+    {
+      "id": "mirage-t-spaw-jungla-escalera-smoke",
+      "title": "Smoke Jungla Escalera",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spaw",
+      "target": "Jungla - Escalera",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/jungesca.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/jungesca.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/jungesca.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "anubis-t-spawn-site-b-smoke",
+      "title": "Smokes B - 1 Posicion",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Site B",
+      "difficulty": "media",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "CT",
+          "url": "assets/videos/maps/anubis/ninjact.mp4"
+        },
+        {
+          "title": "Ninja",
+          "url": "assets/videos/maps/anubis/ninja.mp4"
+        },
+        {
+          "title": "Connector",
+          "url": "assets/videos/maps/anubis/connectorb.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/ninjact.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/siteb.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "mirage-aguas-site-a-smoke",
+      "title": "Molo Site A",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Site A",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/moloa.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/moloa.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/moloa.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "mirage-aguas-heaven-smoke",
+      "title": "Smoke Heaven",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Heaven",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/heaven.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/heaven.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/heaven.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "mirage-t-spawn-connector-smoke",
+      "title": "Smoke Connector - T Spawn",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Connector",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/connector.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/connector.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/connector.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "anubis-aguas-cajas-b-smoke",
+      "title": "Smoke Caja B",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "Cajas B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/caja.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/caja.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/caja.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-04"
+    },
+    {
+      "id": "ancient-larga-roto-a-smoke",
+      "title": "Smoke Roto A - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "Roto A",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/roto.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/roto.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/roto.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-kats-azul-b-molotov",
+      "title": "Molo Azul B - Kats",
+      "map": "ancient",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Azul B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/molo_azul.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/molo_azul.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/moloazul.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "mirage-kats-corta-smoke",
+      "title": "Smoke Corta B - Kats",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Corta",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/corta.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/corta.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/corta.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "mirage-kats-larga-b-smoke",
+      "title": "Smoke Larga B - Kats",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Kats",
+      "target": "Larga B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/larga.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/larga.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/larga.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-larga-ct-smoke",
+      "title": "Smoke CT - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "CT",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/ct.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/ct.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/ct.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-larga-donut-smoke",
+      "title": "Smoke Donut - Larga",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Larga",
+      "target": "Donut",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/donut.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/donut.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/donut.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-ct-spawn-codo-smoke",
+      "title": "Insta Smokes - CT Spawn",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "CT Spawn",
+      "target": "Codo",
+      "difficulty": "difícil",
+      "throw": "W + Click izquierdo + Jumpthrow",
+      "movement": "W + Click izquierdo + Jumpthrow",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Spawn 1",
+          "url": "assets/insta/ancient/CT/pos1.mp4"
+        },
+        {
+          "title": "Spawn 2",
+          "url": "assets/insta/ancient/CT/pos2.mp4"
+        },
+        {
+          "title": "Spawn 3",
+          "url": "assets/insta/ancient/CT/pos3.mp4"
+        },
+        {
+          "title": "Spawn 4",
+          "url": "assets/insta/ancient/CT/pos4.mp4"
+        },
+        {
+          "title": "Spawn 5",
+          "url": "assets/insta/ancient/CT/pos5.mp4"
+        }
+      ],
+      "videoUrl": "assets/insta/ancient/CT/pos1.mp4",
+      "thumbnail": "assets/insta/ancient/posis_ancientct.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "ancient-t-spawn-rojo-smoke",
+      "title": "Insta Smokes - T Spawn",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Rojo",
+      "difficulty": "difícil",
+      "throw": "Jumpthrow",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Spawn 1",
+          "url": "assets/insta/ancient/T/pos1.mp4"
+        },
+        {
+          "title": "Spawn 2",
+          "url": "assets/insta/ancient/T/pos2.mp4"
+        },
+        {
+          "title": "Spawn 3",
+          "url": "assets/insta/ancient/T/pos3.mp4"
+        },
+        {
+          "title": "Spawn 4",
+          "url": "assets/insta/ancient/T/pos4.mp4"
+        },
+        {
+          "title": "Spawn 5",
+          "url": "assets/insta/ancient/T/pos5.mp4"
+        }
+      ],
+      "videoUrl": "assets/insta/ancient/T/pos1.mp4",
+      "thumbnail": "assets/insta/ancient/posis_ancient.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-03"
+    },
+    {
+      "id": "inferno-muro-banan-oscuro-molotov",
+      "title": "Molo Oscuro",
+      "map": "inferno",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Muro Banan",
+      "target": "Oscuro",
+      "difficulty": "fácil",
+      "throw": "W + Click izquierdo",
+      "movement": "W",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/molooscuro.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/molooscuro.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/molooscuro.jpg",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "mirage-coche-sandwich-smoke",
+      "title": "Molo Sandwich y Segundas",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Coche",
+      "target": "Sandwich",
+      "difficulty": "fácil",
+      "throw": "",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/molo2sand.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/molo2sand.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/molo2.jpg",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "inferno-coche-caja-triple-molotov",
+      "title": "Molo Triple",
+      "map": "inferno",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Coche",
+      "target": "Caja Triple",
+      "difficulty": "fácil",
+      "throw": "",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videoUrl": "assets/videos/maps/inferno/molo3.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/molotriple.jpg",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "cache-conector-boost-molotov",
+      "title": "Molo Bosst Medio",
+      "map": "cache",
+      "type": "molotov",
+      "team": "CT",
+      "origin": "Conector",
+      "target": "Boost",
+      "difficulty": "difícil",
+      "throw": "Jumpthrow",
+      "movement": "Pulsando A",
+      "precision": "alta",
+      "setpos": "",
+      "videoUrl": "assets/videos/maps/cache/molo.mp4",
+      "thumbnail": "assets/maps/cache.png",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "cache-toxico-cheaven-smoke",
+      "title": "Smoke Heaven B",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Toxico",
+      "target": "Heaven",
+      "difficulty": "fácil",
+      "throw": "Doble-Click + Jumpthrow",
+      "movement": "",
+      "precision": "media",
+      "setpos": "",
+      "videoUrl": "assets/videos/maps/cache/ct.mp4",
+      "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "insta-smokes-mirage",
+      "title": "Insta Smokes",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T-Spawn",
+      "target": "Ventana",
+      "difficulty": "",
+      "throw": "jumpthrow",
+      "movement": "quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Spawn 1",
+          "url": "assets/insta/mirage/pos1.mp4",
+          "spawnImage": "assets/insta/mirage/posis_mirage.jpg"
+        },
+        {
+          "title": "Spawn 2",
+          "url": "assets/insta/mirage/pos2.mp4",
+          "spawnImage": "assets/insta/mirage/posis_mirage.jpg"
+        },
+        {
+          "title": "Spawn 3",
+          "url": "assets/insta/mirage/pos3.mp4"
+        },
+        {
+          "title": "Spawn 4",
+          "url": "assets/insta/mirage/pos4.mp4"
+        },
+        {
+          "title": "Spawn 5",
+          "url": "assets/insta/mirage/pos5.mp4"
+        },
+        {
+          "title": "Spawn 6",
+          "url": "assets/insta/mirage/pos6.mp4"
+        },
+        {
+          "title": "Spawn 7",
+          "url": "assets/insta/mirage/pos7.mp4"
+        },
+        {
+          "title": "Spawn 8",
+          "url": "assets/insta/mirage/pos8.mp4"
+        },
+        {
+          "title": "Spawn 9",
+          "url": "assets/insta/mirage/pos9.mp4"
+        },
+        {
+          "title": "Spawn 10",
+          "url": "assets/insta/mirage/pos10.mp4"
+        }
+      ],
+      "videoUrl": "assets/insta/mirage/pos1.mp4",
+      "thumbnail": "assets/insta/mirage/posis_mirage.JPG",
+      "description": "Fuerza al defensor de ramp a abandonar la posición o recibir daño.",
+      "steps": [
+        "Colócate junto al marco de radio.",
+        "Apunta al borde de la pared de ramp.",
+        "Lanza con clic izquierdo."
+      ],
+      "tags": [
+        "ramp",
+        "clear"
+      ],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-07-30"
+    }
+  ]
+}

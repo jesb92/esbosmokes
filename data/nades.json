@@ -57,6 +57,38 @@
   ],
   "nades": [
     {
+      "id": "inferno-banana-ct-ataud-smoke",
+      "title": "Smokes B - 1 Posicion",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Banana",
+      "target": "CT - Ataud",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/sitebposi.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/sitebposi.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/sitebposi.jpg",
+      "description": "",
+      "steps": [
+        "1 - Esquina",
+        "2 - Ataud, click izquierdo",
+        "3 - CT, doble click"
+      ],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-07"
+    },
+    {
       "id": "anubis-aguas-escaleras-smoke",
       "title": "Smoke Escaleras",
       "map": "anubis",

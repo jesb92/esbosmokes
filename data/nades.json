@@ -57,6 +57,62 @@
   ],
   "nades": [
     {
+      "id": "inferno-banana-ct-smoke",
+      "title": "HE CT - Posi 2",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Banana",
+      "target": "CT",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/hectpos2.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/hectpos2.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/hectpos1.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-07"
+    },
+    {
+      "id": "mirage-banana-ct-smoke",
+      "title": "HE CT - Posi 1",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Banana",
+      "target": "CT",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/hectpos1.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/hectpos1.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/hect.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-07"
+    },
+    {
       "id": "inferno-banana-ct-ataud-smoke",
       "title": "Smokes B - 1 Posicion",
       "map": "inferno",

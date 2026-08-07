@@ -76,7 +76,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/inferno/hectpos2.mp4",
-      "thumbnail": "assets/maps/mapas/inferno/hectpos1.jpg",
+      "thumbnail": "assets/maps/mapas/inferno/hect.jpg",
       "description": "",
       "steps": [],
       "tags": [],
@@ -87,7 +87,7 @@
     {
       "id": "mirage-banana-ct-smoke",
       "title": "HE CT - Posi 1",
-      "map": "mirage",
+      "map": "inferno",
       "type": "smoke",
       "team": "T",
       "origin": "Banana",

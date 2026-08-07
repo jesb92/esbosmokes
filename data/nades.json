@@ -128,11 +128,11 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/videos/maps/inferno/sitebposi.mp4"
+          "url": "assets/videos/maps/inferno/siteb1posi.mp4"
         }
       ],
-      "videoUrl": "assets/videos/maps/inferno/sitebposi.mp4",
-      "thumbnail": "assets/maps/mapas/inferno/sitebposi.jpg",
+      "videoUrl": "assets/videos/maps/inferno/siteb1posi.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/siteb1posi.jpg",
       "description": "",
       "steps": [
         "1 - Esquina",

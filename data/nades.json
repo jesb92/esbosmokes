@@ -57,6 +57,62 @@
   ],
   "nades": [
     {
+      "id": "inferno-secundaria-pit-smoke",
+      "title": "Smoke Pit desde Secun",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Secundaria",
+      "target": "Pit",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/secunpit.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/secunpit.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/secunpit.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-11"
+    },
+    {
+      "id": "inferno-secundaria-moto-smoke",
+      "title": "Smoke Moto desde Secun",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Secundaria",
+      "target": "Moto",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/secunmoto.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/secunmoto.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/secunmoto.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-11"
+    },
+    {
       "id": "inferno-banana-ct-smoke",
       "title": "HE CT - Posi 2",
       "map": "inferno",

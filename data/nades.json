@@ -104,7 +104,7 @@
         }
       ],
       "videoUrl": "assets/video/maps/cache/heaven.mp4",
-      "thumbnail": "assets/maps/mapas/cache/heaven",
+      "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],

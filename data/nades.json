@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "cache-toxico-heaven-smoke",
+      "title": "Smoke Heaven B",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Toxico",
+      "target": "Heaven",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/video/maps/cache/heaven.mp4"
+        }
+      ],
+      "videoUrl": "assets/video/maps/cache/heaven.mp4",
+      "thumbnail": "assets/maps/mapas/cache/heaven",
+      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-19"
+    },
+    {
       "id": "inferno-secundaria-pit-smoke",
       "title": "Smoke Pit desde Secun",
       "map": "inferno",
@@ -958,17 +986,23 @@
     },
     {
       "id": "cache-toxico-cheaven-smoke",
-      "title": "Smoke Heaven B",
+      "title": "Smoke CT B",
       "map": "cache",
       "type": "smoke",
       "team": "T",
       "origin": "Toxico",
-      "target": "Heaven",
+      "target": "CT",
       "difficulty": "fácil",
       "throw": "Doble-Click + Jumpthrow",
       "movement": "",
       "precision": "media",
       "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/ct.mp4"
+        }
+      ],
       "videoUrl": "assets/videos/maps/cache/ct.mp4",
       "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",

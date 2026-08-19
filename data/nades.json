@@ -60,7 +60,7 @@
       "id": "cache-toxico-cabeza-smoke",
       "title": "Molo Cabeza B",
       "map": "cache",
-      "type": "smoke",
+      "type": "molotov",
       "team": "T",
       "origin": "Toxico",
       "target": "Cabeza",

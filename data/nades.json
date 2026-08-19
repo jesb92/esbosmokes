@@ -1003,8 +1003,14 @@
       "movement": "Pulsando A",
       "precision": "alta",
       "setpos": "",
-      "videoUrl": "assets/videos/maps/cache/molo.mp4",
-      "thumbnail": "assets/maps/cache.png",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/boost.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/boost.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/boost.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],

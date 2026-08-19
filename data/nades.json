@@ -57,6 +57,34 @@
   ],
   "nades": [
     {
+      "id": "dust2-xbox-ct-smoke",
+      "title": "Smoke CT desde Xbox",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Xbox",
+      "target": "CT",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/ct.mp4"
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/ct.mp4",
+      "thumbnail": "assets/maps/mapas/d2/ct.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-19"
+    },
+    {
       "id": "cache-toxico-cabeza-smoke",
       "title": "Molo Cabeza B",
       "map": "cache",

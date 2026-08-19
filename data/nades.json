@@ -57,34 +57,6 @@
   ],
   "nades": [
     {
-      "id": "cache-toxico-cabeza-smoke",
-      "title": "Molo Cabeza B",
-      "map": "cache",
-      "type": "smoke",
-      "team": "T",
-      "origin": "Toxico",
-      "target": "Cabeza",
-      "difficulty": "fácil",
-      "throw": "Normal",
-      "movement": "",
-      "precision": "alta",
-      "setpos": "",
-      "videos": [
-        {
-          "title": "Vídeo 1",
-          "url": "assets/video/maps/cache/molocabeza.mp4"
-        }
-      ],
-      "videoUrl": "assets/video/maps/cache/molocabeza.mp4",
-      "thumbnail": "assets/maps/mapas/cache/molocabeza",
-      "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
-      "steps": [],
-      "tags": [],
-      "featured": false,
-      "published": true,
-      "createdAt": "2026-08-19"
-    },
-    {
       "id": "cache-toxico-heaven-smoke",
       "title": "Smoke Heaven B",
       "map": "cache",
@@ -104,7 +76,7 @@
         }
       ],
       "videoUrl": "assets/video/maps/cache/heaven.mp4",
-      "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
+      "thumbnail": "assets/maps/mapas/cache/heaven",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],
@@ -1010,7 +982,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/cache/boost.mp4",
-      "thumbnail": "assets/maps/mapas/ancient/boost.jpg",
+      "thumbnail": "assets/maps/mapas/cache/boost.jpg",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",
       "steps": [],
       "tags": [],

@@ -57,6 +57,62 @@
   ],
   "nades": [
     {
+      "id": "dust2-fuera-oscuro-puertas-b-smoke",
+      "title": "Smoke Puerta B",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Fuera Oscuro",
+      "target": "Puertas B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/video/maps/d2/puerta.mp4"
+        }
+      ],
+      "videoUrl": "assets/video/maps/d2/puerta.mp4",
+      "thumbnail": "assets/maps/mapas/d2/puerta.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-19"
+    },
+    {
+      "id": "dust2-fuera-oscuro-ventana-smoke",
+      "title": "Smoke Ventana B",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Fuera Oscuro",
+      "target": "Ventana",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/video/maps/d2/rotob.mp4"
+        }
+      ],
+      "videoUrl": "assets/video/maps/d2/rotob.mp4",
+      "thumbnail": "assets/maps/mapas/d2/rotob.jpg",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-08-19"
+    },
+    {
       "id": "dust2-xbox-ct-smoke",
       "title": "Smoke CT desde Xbox",
       "map": "dust2",

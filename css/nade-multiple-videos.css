@@ -34,29 +34,33 @@
 }
 
 
-/* Imagen de referencia encima del selector y del vídeo */
-.spawn-reference {
-  margin-bottom: 20px;
+
+
+
+/* Imagen independiente entre la portada y el vídeo */
+.reference-image {
+  margin: 20px 0 28px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--panel);
 }
 
-.spawn-reference[hidden] {
+.reference-image[hidden] {
   display: none;
 }
 
-.spawn-reference img {
+.reference-image img {
   display: block;
   width: 100%;
-  max-height: 420px;
+  max-height: 500px;
   object-fit: contain;
+  object-position: center;
   background: #080a0d;
 }
 
 @media (max-width: 640px) {
-  .spawn-reference img {
-    max-height: 300px;
+  .reference-image img {
+    max-height: 320px;
   }
 }

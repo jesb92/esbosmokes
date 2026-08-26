@@ -13,7 +13,7 @@
     document.querySelector('[data-description]').textContent = nade.description;
     document.querySelector('[data-route]').innerHTML = `${escapeHtml(nade.origin)} <span class="arrow">→</span> ${escapeHtml(nade.target)}`;
 
-    renderSpawnReference(nade);
+    renderReferenceImage(nade);
 
     const videos = normalizeNadeVideos(nade.videos, nade.videoUrl);
     const videoViewer = document.querySelector('[data-video-viewer], [data-video]');
@@ -62,15 +62,23 @@
 })();
 
 
-function renderSpawnReference(nade) {
-  const wrapper = document.querySelector('[data-spawn-image-wrap]');
-  const image = document.querySelector('[data-spawn-image]');
-  const thumbnail = String(nade.thumbnail || '').trim();
 
-  if (!wrapper || !image || !thumbnail) return;
 
-  image.src = thumbnail;
-  image.alt = `Referencia visual de ${nade.title}`;
+function renderReferenceImage(nade) {
+  const wrapper = document.querySelector('[data-reference-image-wrap]');
+  const image = document.querySelector('[data-reference-image]');
+  const path = String(nade.referenceImage || '').trim();
+
+  if (!wrapper || !image) return;
+
+  if (!path) {
+    wrapper.hidden = true;
+    image.removeAttribute('src');
+    return;
+  }
+
+  image.src = path;
+  image.alt = `Imagen de referencia de ${nade.title}`;
   wrapper.hidden = false;
 
   image.addEventListener('error', () => {

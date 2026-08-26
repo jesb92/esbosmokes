@@ -192,7 +192,8 @@ function saveEntry(event) {
       setpos: formValue('setpos'),
       videos,
       videoUrl: videos.length ? videos[0].url : '',
-      thumbnail: formValue('thumbnail') || existing?.thumbnail || '',
+      thumbnail: formValue('thumbnail') || (mapRecord ? mapRecord.image : ''),
+      referenceImage: formValue('referenceImage') || existing?.referenceImage || '',
       description: formValue('description'),
       steps: formValue('steps')
         .split('\n')
@@ -243,7 +244,7 @@ function editEntry(id) {
   const entry = workingData.nades.find(n => n.id === id);
   if (!entry) return;
   editingId = id;
-  const fields = ['id','title','map','type','team','origin','target','difficulty','throw','movement','precision','setpos','thumbnail','description'];
+  const fields = ['id','title','map','type','team','origin','target','difficulty','throw','movement','precision','setpos','thumbnail','referenceImage','description'];
   fields.forEach(name => {
     const el = document.querySelector(`[name="${name}"]`);
     if (el) el.value = entry[name] || '';

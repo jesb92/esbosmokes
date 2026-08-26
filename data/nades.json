@@ -958,7 +958,9 @@
       "thumbnail": "assets/insta/ancient/posis_ancientct.jpg",
       "referenceImage": "",
       "description": "",
-      "steps": [],
+      "steps": [
+        "EJEMPLO"
+      ],
       "tags": [],
       "featured": false,
       "published": true,

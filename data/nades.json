@@ -974,27 +974,33 @@
       "videos": [
         {
           "title": "Spawn 1",
-          "url": "assets/insta/ancient/T/pos1.mp4"
+          "url": "assets/insta/ancient/T/pos1.mp4",
+          "image": "assets/maps/mapas/ancient/ref/T/pos1.jpg"
         },
         {
           "title": "Spawn 2",
-          "url": "assets/insta/ancient/T/pos2.mp4"
+          "url": "assets/insta/ancient/T/pos2.mp4",
+          "image": ""
         },
         {
           "title": "Spawn 3",
-          "url": "assets/insta/ancient/T/pos3.mp4"
+          "url": "assets/insta/ancient/T/pos3.mp4",
+          "image": ""
         },
         {
           "title": "Spawn 4",
-          "url": "assets/insta/ancient/T/pos4.mp4"
+          "url": "assets/insta/ancient/T/pos4.mp4",
+          "image": ""
         },
         {
           "title": "Spawn 5",
-          "url": "assets/insta/ancient/T/pos5.mp4"
+          "url": "assets/insta/ancient/T/pos5.mp4",
+          "image": ""
         }
       ],
       "videoUrl": "assets/insta/ancient/T/pos1.mp4",
       "thumbnail": "assets/insta/ancient/posis_ancient.jpg",
+      "referenceImage": "",
       "description": "",
       "steps": [],
       "tags": [],

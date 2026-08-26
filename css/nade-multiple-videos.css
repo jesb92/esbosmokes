@@ -93,3 +93,9 @@
     max-height: 320px;
   }
 }
+
+
+/* La foto de referencia cambia con el vídeo seleccionado */
+.reference-image {
+  transition: opacity .16s ease;
+}

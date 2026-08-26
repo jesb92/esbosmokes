@@ -326,13 +326,14 @@ function normalizeVideos(videos, legacyVideoUrl = '') {
 
     return {
       title: String(video.title || `Vídeo ${index + 1}`).trim(),
-      url
+      url,
+      image: String(video.image || video.referenceImage || '').trim()
     };
   }).filter(Boolean);
 
   const legacy = String(legacyVideoUrl || '').trim();
   if (!normalized.length && legacy) {
-    normalized.push({ title: 'Vídeo 1', url: legacy });
+    normalized.push({ title: 'Vídeo 1', url: legacy, image: '' });
   }
 
   return normalized;
@@ -344,26 +345,40 @@ function parseVideoLines(value) {
     .map(line => line.trim())
     .filter(Boolean)
     .map((line, index) => {
-      const separator = line.indexOf('|');
+      const parts = line.split('|').map(part => part.trim());
 
-      if (separator === -1) {
+      if (parts.length === 1) {
         return {
           title: `Vídeo ${index + 1}`,
-          url: line
+          url: parts[0],
+          image: ''
         };
       }
 
-      const title = line.slice(0, separator).trim() || `Vídeo ${index + 1}`;
-      const url = line.slice(separator + 1).trim();
+      const title = parts[0] || `Vídeo ${index + 1}`;
+      const url = parts[1] || '';
+      const image = parts.slice(2).join('|').trim();
 
-      return url ? { title, url } : null;
+      return url
+        ? {
+            title,
+            url,
+            image
+          }
+        : null;
     })
     .filter(Boolean);
 }
 
 function serializeVideoLines(videos) {
   return normalizeVideos(videos)
-    .map((video, index) => `${video.title || `Vídeo ${index + 1}`} | ${video.url}`)
+    .map((video, index) => {
+      const title = video.title || `Vídeo ${index + 1}`;
+
+      return video.image
+        ? `${title} | ${video.url} | ${video.image}`
+        : `${title} | ${video.url}`;
+    })
     .join('\n');
 }
 

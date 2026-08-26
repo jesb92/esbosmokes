@@ -14,16 +14,19 @@
     document.querySelector('[data-route]').innerHTML = `${escapeHtml(nade.origin)} <span class="arrow">→</span> ${escapeHtml(nade.target)}`;
 
     renderThumbnail(nade);
-    renderReferenceImage(nade);
 
     const videos = normalizeNadeVideos(nade.videos, nade.videoUrl);
+    renderReferenceImage(
+      videos[0]?.image || nade.referenceImage,
+      videos[0]?.title || nade.title
+    );
     const videoViewer = document.querySelector('[data-video-viewer], [data-video]');
 
     if (!videoViewer) {
       throw new Error('No se encontró el contenedor de vídeos en nade.html.');
     }
 
-    renderNadeVideos(videoViewer, videos, nade.title);
+    renderNadeVideos(videoViewer, videos, nade.title, nade.referenceImage);
 
     const favorite = getFavorites().includes(nade.id);
     const favBtn = document.querySelector('[data-detail-favorite]');
@@ -88,26 +91,27 @@ function renderThumbnail(nade) {
   }, { once: true });
 }
 
-function renderReferenceImage(nade) {
+function renderReferenceImage(pathValue, label = '') {
   const wrapper = document.querySelector('[data-reference-image-wrap]');
   const image = document.querySelector('[data-reference-image]');
-  const path = String(nade.referenceImage || '').trim();
+  const path = String(pathValue || '').trim();
 
   if (!wrapper || !image) return;
 
   if (!path) {
     wrapper.hidden = true;
     image.removeAttribute('src');
+    image.alt = '';
     return;
   }
 
   image.src = path;
-  image.alt = `Imagen de referencia de ${nade.title}`;
+  image.alt = label ? `Imagen de referencia de ${label}` : 'Imagen de referencia';
   wrapper.hidden = false;
 
-  image.addEventListener('error', () => {
+  image.onerror = () => {
     wrapper.hidden = true;
-  }, { once: true });
+  };
 }
 
 function normalizeNadeVideos(videos, legacyVideoUrl = '') {
@@ -127,20 +131,21 @@ function normalizeNadeVideos(videos, legacyVideoUrl = '') {
 
       return {
         title: String(video.title || `Vídeo ${index + 1}`).trim(),
-        url
+        url,
+        image: String(video.image || video.referenceImage || '').trim()
       };
     })
     .filter(Boolean);
 
   const legacy = String(legacyVideoUrl || '').trim();
   if (!normalized.length && legacy) {
-    normalized.push({ title: 'Vídeo 1', url: legacy });
+    normalized.push({ title: 'Vídeo 1', url: legacy, image: '' });
   }
 
   return normalized;
 }
 
-function renderNadeVideos(container, videos, lineupTitle) {
+function renderNadeVideos(container, videos, lineupTitle, fallbackReferenceImage = '') {
   if (!videos.length) {
     container.innerHTML = `
       <div class="video-shell">
@@ -183,6 +188,12 @@ function renderNadeVideos(container, videos, lineupTitle) {
     const player = container.querySelector('[data-video-player]');
 
     if (title) title.textContent = selected.title || `Vídeo ${index + 1}`;
+
+    renderReferenceImage(
+      selected.image || fallbackReferenceImage,
+      selected.title || `Vídeo ${index + 1}`
+    );
+
     if (player) {
       player.innerHTML = renderVideoPlayer(
         selected.url,

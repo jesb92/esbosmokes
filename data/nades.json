@@ -73,9 +73,13 @@
         {
           "title": "Vídeo 1",
           "url": "assets/videos/maps/d2/puerta.mp4"
+        },
+        {
+          "title": "Vídeo 2",
+          "url": "assets/maps/mapas/d2/puerta.jpg"
         }
       ],
-      "videoUrl": "assets/video/maps/d2/puerta.mp4",
+      "videoUrl": "assets/videos/maps/d2/puerta.mp4",
       "thumbnail": "assets/maps/mapas/d2/puerta.jpg",
       "description": "",
       "steps": [],

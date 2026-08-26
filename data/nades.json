@@ -980,22 +980,22 @@
         {
           "title": "Spawn 2",
           "url": "assets/insta/ancient/T/pos2.mp4",
-          "image": ""
+          "image": "assets/maps/mapas/ancient/ref/T/pos2.jpg"
         },
         {
           "title": "Spawn 3",
           "url": "assets/insta/ancient/T/pos3.mp4",
-          "image": ""
+          "image": "assets/maps/mapas/ancient/ref/T/pos3.jpg"
         },
         {
           "title": "Spawn 4",
           "url": "assets/insta/ancient/T/pos4.mp4",
-          "image": ""
+          "image": "assets/maps/mapas/ancient/ref/T/pos4.jpg"
         },
         {
           "title": "Spawn 5",
           "url": "assets/insta/ancient/T/pos5.mp4",
-          "image": ""
+          "image": "assets/maps/mapas/ancient/ref/T/pos5.jpg"
         }
       ],
       "videoUrl": "assets/insta/ancient/T/pos1.mp4",

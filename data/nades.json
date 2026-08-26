@@ -822,6 +822,7 @@
       ],
       "videoUrl": "assets/videos/maps/ancient/corta.mp4",
       "thumbnail": "assets/maps/mapas/ancient/corta.jpg",
+      "referenceImage": "assets/maps/mapas/ancient/ref/corta.jpg",
       "description": "",
       "steps": [],
       "tags": [],

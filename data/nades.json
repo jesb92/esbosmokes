@@ -533,6 +533,7 @@
       ],
       "videoUrl": "assets/videos/maps/mirage/corta.mp4",
       "thumbnail": "assets/maps/mapas/mirage/corta.jpg",
+      "referenceImage": "assets/maps/mapas/mirage/ref/corta.jpg",
       "description": "",
       "steps": [],
       "tags": [],

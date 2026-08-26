@@ -1002,7 +1002,13 @@
       "thumbnail": "assets/insta/ancient/posis_ancient.jpg",
       "referenceImage": "",
       "description": "",
-      "steps": [],
+      "steps": [
+        "Pos1 - setpos -192.000000 1696.000000 88.633125;setang -17.048941 -51.153271 0.000000",
+        "Pos2 - setpos -256.000183 1727.635254 88.820511;setang -22.758865 -49.389374 0.000000",
+        "Pos3 - setpos -352.000000 1728.000000 91.548370;setang -28.141815 -46.456024 0.000000",
+        "Pos4 - setpos -448.000000 1728.000000 93.239128;setang -15.165672 -49.064060 0.000000",
+        "Pos5 - setpos -512.000000 1696.000000 88.682266;setang -15.337710 -46.838409 0.000000"
+      ],
       "tags": [],
       "featured": false,
       "published": true,

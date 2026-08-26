@@ -192,7 +192,7 @@ function saveEntry(event) {
       setpos: formValue('setpos'),
       videos,
       videoUrl: videos.length ? videos[0].url : '',
-      thumbnail: formValue('thumbnail') || (mapRecord ? mapRecord.image : ''),
+      thumbnail: formValue('thumbnail') || existing?.thumbnail || '',
       referenceImage: formValue('referenceImage') || existing?.referenceImage || '',
       description: formValue('description'),
       steps: formValue('steps')

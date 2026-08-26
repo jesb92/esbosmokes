@@ -13,6 +13,7 @@
     document.querySelector('[data-description]').textContent = nade.description;
     document.querySelector('[data-route]').innerHTML = `${escapeHtml(nade.origin)} <span class="arrow">→</span> ${escapeHtml(nade.target)}`;
 
+    renderThumbnail(nade);
     renderReferenceImage(nade);
 
     const videos = normalizeNadeVideos(nade.videos, nade.videoUrl);
@@ -63,6 +64,29 @@
 
 
 
+
+
+function renderThumbnail(nade) {
+  const wrapper = document.querySelector('[data-thumbnail-wrap]');
+  const image = document.querySelector('[data-thumbnail-image]');
+  const path = String(nade.thumbnail || '').trim();
+
+  if (!wrapper || !image) return;
+
+  if (!path) {
+    wrapper.hidden = true;
+    image.removeAttribute('src');
+    return;
+  }
+
+  image.src = path;
+  image.alt = `Portada de ${nade.title}`;
+  wrapper.hidden = false;
+
+  image.addEventListener('error', () => {
+    wrapper.hidden = true;
+  }, { once: true });
+}
 
 function renderReferenceImage(nade) {
   const wrapper = document.querySelector('[data-reference-image-wrap]');

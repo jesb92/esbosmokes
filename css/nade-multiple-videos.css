@@ -64,3 +64,32 @@
     max-height: 320px;
   }
 }
+
+
+/* Portada / thumbnail de la lineup */
+.thumbnail-cover {
+  margin: 0 0 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.thumbnail-cover[hidden] {
+  display: none;
+}
+
+.thumbnail-cover img {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: center;
+  background: #080a0d;
+}
+
+@media (max-width: 640px) {
+  .thumbnail-cover img {
+    max-height: 320px;
+  }
+}

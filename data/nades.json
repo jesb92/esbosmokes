@@ -72,7 +72,7 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/video/maps/d2/puerta.mp4"
+          "url": "assets/videos/maps/d2/puerta.mp4"
         }
       ],
       "videoUrl": "assets/video/maps/d2/puerta.mp4",
@@ -100,7 +100,7 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/video/maps/d2/rotob.mp4"
+          "url": "assets/videos/maps/d2/rotob.mp4"
         }
       ],
       "videoUrl": "assets/video/maps/d2/rotob.mp4",

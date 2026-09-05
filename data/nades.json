@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "dust2-t-spawn-puertas-smoke",
+      "title": "Smoke Puertas B",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Puertas",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/puertaspawn.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/puertaspawn.mp4",
+      "thumbnail": "assets/maps/mapas/d2/puertaspawn.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-05"
+    },
+    {
       "id": "dust2-fuera-oscuro-puertas-b-smoke",
       "title": "Smoke Puerta B",
       "map": "dust2",

@@ -72,12 +72,12 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "/assets/videos/maps/anubis/ninja.mp4",
+          "url": "assets/videos/maps/anubis/ninja.mp4",
           "image": ""
         }
       ],
-      "videoUrl": "/assets/videos/maps/anubis/ninja.mp4",
-      "thumbnail": "/assets/maps/mapas/anubis/ninja.jpg",
+      "videoUrl": "assets/videos/maps/anubis/ninja.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/ninja.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],

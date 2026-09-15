@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "anubis-conector-ninja-smoke",
+      "title": "HE + Molo Ninja",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Conector",
+      "target": "Ninja",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "/assets/videos/maps/anubis/ninja.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "/assets/videos/maps/anubis/ninja.mp4",
+      "thumbnail": "/assets/maps/mapas/anubis/ninja.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-15"
+    },
+    {
       "id": "dust2-t-spawn-puertas-smoke",
       "title": "Smoke Puertas B",
       "map": "dust2",

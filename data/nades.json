@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "ancient-rampa-chita-molotov",
+      "title": "Molo Chita",
+      "map": "ancient",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Rampa",
+      "target": "Chita",
+      "difficulty": "difícil",
+      "throw": "Normal",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/chita.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/chita.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/chita.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-15"
+    },
+    {
       "id": "anubis-conector-ninja-smoke",
       "title": "HE + Molo Ninja",
       "map": "anubis",

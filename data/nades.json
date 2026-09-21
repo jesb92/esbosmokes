@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "cache-toxico-triple-b-smoke",
+      "title": "Molo Triple",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Toxico",
+      "target": "Triple B",
+      "difficulty": "fácil",
+      "throw": "Click Izquierdo",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/molotriple.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/molotriple.mp4",
+      "thumbnail": "assets/maps/mapas/cache/molotriple.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-21"
+    },
+    {
       "id": "ancient-rampa-chita-molotov",
       "title": "Molo Chita",
       "map": "ancient",

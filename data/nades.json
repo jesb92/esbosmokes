@@ -250,11 +250,13 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/video/maps/cache/molocabeza.mp4"
+          "url": "assets/videos/maps/cache/molocabeza.mp4",
+          "image": ""
         }
       ],
-      "videoUrl": "assets/video/maps/cache/molocabeza.mp4",
+      "videoUrl": "assets/videos/maps/cache/molocabeza.mp4",
       "thumbnail": "assets/maps/mapas/cache/molocabeza.jpg",
+      "referenceImage": "",
       "description": "",
       "steps": [],
       "tags": [],
@@ -278,11 +280,11 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/video/maps/cache/heaven.mp4",
+          "url": "assets/videos/maps/cache/heaven.mp4",
           "image": ""
         }
       ],
-      "videoUrl": "assets/video/maps/cache/heaven.mp4",
+      "videoUrl": "assets/videos/maps/cache/heaven.mp4",
       "thumbnail": "assets/maps/mapas/cache/heaven.jpg",
       "referenceImage": "",
       "description": "Bloquea la visión del jugador de ventana para facilitar el control de medio.",

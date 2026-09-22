@@ -1,0 +1,114 @@
+/* Selector visual CT / T dentro de cada mapa */
+
+.team-filter-block {
+  margin: 8px 0 24px;
+}
+
+.team-filter-head {
+  margin-bottom: 14px;
+}
+
+.team-filter-status {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.team-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.team-filter-card {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.01)),
+    var(--panel);
+  color: var(--text);
+  padding: 16px 18px 18px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.team-filter-card:hover {
+  transform: translateY(-3px);
+  border-color: #46505f;
+}
+
+.team-filter-card.is-active {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 16px 35px rgba(0,0,0,.24);
+  background:
+    linear-gradient(145deg, rgba(243,201,105,.10), rgba(255,255,255,.01)),
+    var(--panel);
+}
+
+.team-filter-image {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+}
+
+.team-filter-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.team-filter-card strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.team-filter-card > span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.team-filter-card.is-active > span {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .team-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .team-filter-card {
+    min-height: 185px;
+    padding: 12px;
+  }
+
+  .team-filter-image {
+    height: 118px;
+  }
+
+  .team-filter-card strong {
+    font-size: 24px;
+  }
+
+  .team-filter-card > span {
+    font-size: 11px;
+  }
+
+  .team-filter-status {
+    display: none;
+  }
+}

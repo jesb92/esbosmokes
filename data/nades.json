@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "mirage-palace-default-smoke",
+      "title": "Humo Default desde Palace",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Palace",
+      "target": "Default",
+      "difficulty": "fácil",
+      "throw": "",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/default.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/default.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/default.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-23"
+    },
+    {
       "id": "mirage-corta-apps-molotov",
       "title": "Molo Apps desde Corta",
       "map": "mirage",

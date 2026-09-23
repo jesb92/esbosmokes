@@ -111,42 +111,4 @@
   .team-filter-status {
     display: none;
   }
-
-  /* Quitar espacio superior antes de Elegir bando */
-.team-section {
-  padding-top: 0;
-}
-
-/* Tarjetas CT / T más altas */
-.team-filter-card {
-  min-height: 320px;
-}
-
-/* Agentes más grandes */
-.team-filter-image {
-  height: 245px;
-  margin-bottom: 8px;
-}
-
-.team-filter-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
-@media (max-width: 640px) {
-  .team-section {
-    padding-top: 0;
-  }
-
-  .team-filter-card {
-    min-height: 250px;
-  }
-
-  .team-filter-image {
-    height: 185px;
-  }
-}
-
 }

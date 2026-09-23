@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "inferno-oscuro-coche-he",
+      "title": "HE Banana",
+      "map": "inferno",
+      "type": "he",
+      "team": "CT",
+      "origin": "Oscuro",
+      "target": "Coche",
+      "difficulty": "media",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/hebanana.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/hebanana.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/hebanana.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-23"
+    },
+    {
       "id": "anubis-spawn-mid-con-smoke",
       "title": "1 Posi Mid y Con",
       "map": "anubis",
@@ -77,7 +107,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/midcon.mp4",
-      "thumbnail": "assets/videos/maps/anubis/midcon.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/midcon.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],
@@ -107,7 +137,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/moloroto.mp4",
-      "thumbnail": "assets/videos/maps/anubis/moloroto.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/moloroto.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],
@@ -125,7 +155,7 @@
       "origin": "Mid",
       "target": "Mid CT",
       "difficulty": "difícil",
-      "throw": "",
+      "throw": "Quieto",
       "movement": "Quieto",
       "precision": "alta",
       "setpos": "",

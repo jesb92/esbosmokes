@@ -29,7 +29,7 @@
     linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.01)),
     var(--panel);
   color: var(--text);
-  padding: 16px 18px 18px;
+  padding: 1px 1px 50px;
   cursor: pointer;
   text-align: left;
   transition:

@@ -57,6 +57,96 @@
   ],
   "nades": [
     {
+      "id": "anubis-spawn-mid-con-smoke",
+      "title": "1 Posi Mid y Con",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Spawn",
+      "target": "Mid + Con",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/midcon.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/midcon.mp4",
+      "thumbnail": "assets/videos/maps/anubis/midcon.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-23"
+    },
+    {
+      "id": "anubis-medio-roto-mid-molotov",
+      "title": "Molo Roto Mid",
+      "map": "anubis",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Medio",
+      "target": "Roto Mid",
+      "difficulty": "fácil",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/moloroto.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/moloroto.mp4",
+      "thumbnail": "assets/videos/maps/anubis/moloroto.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-23"
+    },
+    {
+      "id": "anubis-mid-mid-ct-molotov",
+      "title": "Molo Mid CT",
+      "map": "anubis",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Mid",
+      "target": "Mid CT",
+      "difficulty": "difícil",
+      "throw": "",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/midawp.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/midawp.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/midawp.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-23"
+    },
+    {
       "id": "mirage-palace-default-smoke",
       "title": "Humo Default desde Palace",
       "map": "mirage",

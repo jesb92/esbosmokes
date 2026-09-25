@@ -60,7 +60,7 @@
       "id": "cache-boost-caja-mid-smoke",
       "title": "HE caja mid",
       "map": "cache",
-      "type": "smoke",
+      "type": "he",
       "team": "T",
       "origin": "Boost",
       "target": "Caja mid",
@@ -107,7 +107,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/anubis/humosb.mp4",
-      "thumbnail": "assets/videos/maps/anubis/humosb.jpg",
+      "thumbnail": "assets/maps/mapas/anubis/humosb.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],

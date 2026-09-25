@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "cache-boost-caja-mid-smoke",
+      "title": "HE caja mid",
+      "map": "cache",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Boost",
+      "target": "Caja mid",
+      "difficulty": "media",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/nademid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/nademid.mp4",
+      "thumbnail": "assets/maps/mapas/cache/nademid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-25"
+    },
+    {
       "id": "anubis-aguas-b-smoke",
       "title": "Humos B desde Aguas",
       "map": "anubis",

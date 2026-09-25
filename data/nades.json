@@ -57,6 +57,36 @@
   ],
   "nades": [
     {
+      "id": "anubis-aguas-b-smoke",
+      "title": "Humos B desde Aguas",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Aguas",
+      "target": "B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/humosb.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/humosb.mp4",
+      "thumbnail": "assets/videos/maps/anubis/humosb.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-25"
+    },
+    {
       "id": "inferno-oscuro-coche-he",
       "title": "HE Banana",
       "map": "inferno",

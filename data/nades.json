@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "dust2-t-spawn-puertas-b-smoke",
+      "title": "Smoke puerta desde T spawn",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T spawn",
+      "target": "Puertas B",
+      "difficulty": "difícil",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/smokespawn.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/smokespawn.mp4",
+      "thumbnail": "assets/maps/mapas/d2/smokespawn.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
+      "id": "dust2-pool-oscuro-flash",
+      "title": "Pop flash B",
+      "map": "dust2",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Pool",
+      "target": "Oscuro",
+      "difficulty": "fácil",
+      "throw": "Right Click",
+      "movement": "",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/popflashoscuro.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/popflashoscuro.mp4",
+      "thumbnail": "assets/maps/mapas/d2/popflashoscuro.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
       "id": "anubis-a-escaleras-he",
       "title": "HE escaleras",
       "map": "anubis",

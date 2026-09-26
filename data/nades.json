@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "mirage-he-corta-rampa",
+      "title": "HE corta rampa desde Jungla",
+      "map": "mirage",
+      "type": "he",
+      "team": "CT",
+      "origin": "Jungla",
+      "target": "Rampa",
+      "difficulty": "fácil",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/junglarampacorta.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/junglarampacorta.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/junglarampacorta.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
+      "id": "mirage-jungla-rampa-he",
+      "title": "HE rampa desde Jungla",
+      "map": "mirage",
+      "type": "he",
+      "team": "CT",
+      "origin": "Jungla",
+      "target": "Rampa",
+      "difficulty": "fácil",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/junglarampa.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/junglarampa.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/junglarampa.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
       "id": "dust2-coche-long-flash",
       "title": "Pop flash long",
       "map": "dust2",

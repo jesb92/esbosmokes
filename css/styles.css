@@ -184,27 +184,3 @@ h3 { margin: 0; }
   margin: 0 auto 24px;
   border-radius: 18px;
 }
-.utility-counter {
-  min-width: 120px;
-  padding: 12px 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--panel);
-  text-align: center;
-}
-
-.utility-counter strong {
-  display: block;
-  color: var(--accent);
-  font-size: 30px;
-  line-height: 1;
-}
-
-.utility-counter span {
-  display: block;
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-}

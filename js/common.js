@@ -42,25 +42,29 @@ async function updateUtilityCounter() {
   if (!el) return;
 
   try {
-    const response = await fetch('data/nades.json', {
-      cache: 'no-store'
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-
+    const data = await loadData();
     const total = Array.isArray(data.nades)
       ? data.nades.filter(nade => nade.published !== false).length
       : 0;
 
     el.textContent = String(total);
   } catch (error) {
-    console.error('Error cargando contador:', error);
-    el.textContent = '0';
+    console.warn('No se pudo actualizar el contador de utilidades:', error);
+    el.textContent = '—';
   }
+}
+
+function toast(message) {
+  let el = document.querySelector('.toast');
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'toast';
+    document.body.appendChild(el);
+  }
+  el.textContent = message;
+  el.classList.add('show');
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => el.classList.remove('show'), 1800);
 }
 
 function getYouTubeEmbed(url) {
@@ -155,6 +159,7 @@ function renderHeader(active = '') {
       </div>
     </header>`;
   updateFavoriteBadge();
+  updateUtilityCounter();
 }
 
 function renderFooter() {

@@ -4,7 +4,7 @@
   try {
     const data = await loadData();
     const published = data.nades.filter(n => n.published);
-    /*document.querySelector('[data-total-nades]').textContent = published.length;
+/*document.querySelector('[data-total-nades]').textContent = published.length;
     document.querySelector('[data-total-maps]').textContent = data.maps.length;
     document.querySelector('[data-total-featured]').textContent = published.filter(n => n.featured).length;*/
 

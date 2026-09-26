@@ -16,7 +16,6 @@ function getFavorites() {
 function setFavorites(items) {
   localStorage.setItem('esboSmokesFavorites', JSON.stringify([...new Set(items)]));
   updateFavoriteBadge();
-  updateUtilityCounter();
 }
 
 function toggleFavorite(id) {
@@ -35,23 +34,6 @@ function toggleFavorite(id) {
 function updateFavoriteBadge() {
   const el = document.querySelector('[data-favorites-count]');
   if (el) el.textContent = getFavorites().length;
-}
-
-async function updateUtilityCounter() {
-  const el = document.querySelector('[data-nav-total-utility]');
-  if (!el) return;
-
-  try {
-    const data = await loadData();
-    const total = Array.isArray(data.nades)
-      ? data.nades.filter(nade => nade.published !== false).length
-      : 0;
-
-    el.textContent = String(total);
-  } catch (error) {
-    console.warn('No se pudo actualizar el contador de utilidades:', error);
-    el.textContent = '—';
-  }
 }
 
 function toast(message) {
@@ -147,10 +129,6 @@ function renderHeader(active = '') {
       <div class="container nav">
         <a class="brand" href="index.html"><img src="assets/logo.svg" alt="EsboSmokes"></a>
         <nav class="nav-links" aria-label="Principal">
-          <span class="nav-utility-counter" title="Total de utilidades publicadas">
-            <strong data-nav-total-utility>—</strong>
-            <span>Utilidades</span>
-          </span>
           <a class="${active === 'maps' ? 'active' : ''}" href="index.html#maps">Mapas</a>
           <a class="${active === 'execute' ? 'active' : ''}" href="execute.html#execute">Executes</a>
           <a class="${active === 'favorites' ? 'active' : ''}" href="favorites.html">Favoritos <span class="badge-count" data-favorites-count>0</span></a>

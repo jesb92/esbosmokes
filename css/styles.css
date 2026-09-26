@@ -165,22 +165,47 @@ h3 { margin: 0; }
   .admin-item { align-items: flex-start; flex-direction: column; }
 }
 
-.error-page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
+/* Contador total de utilidades en el menú principal */
+.nav-utility-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+  white-space: nowrap;
 }
 
-.error-card {
-  width: min(100%, 1100px);
-  text-align: center;
+.nav-utility-counter strong {
+  color: var(--accent);
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 900;
 }
 
-.error-illustration {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 24px;
-  border-radius: 18px;
+.nav-utility-counter span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
+
+@media (max-width: 640px) {
+  .nav-utility-counter {
+    min-height: 34px;
+    padding: 6px 8px;
+  }
+
+  .nav-utility-counter span {
+    display: none;
+  }
+
+  .nav-utility-counter strong {
+    font-size: 14px;
+  }
+}
+

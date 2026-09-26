@@ -164,3 +164,23 @@ h3 { margin: 0; }
   .brand img { width: 176px; height: auto; }
   .admin-item { align-items: flex-start; flex-direction: column; }
 }
+
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.error-card {
+  width: min(100%, 1100px);
+  text-align: center;
+}
+
+.error-illustration {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  border-radius: 18px;
+}

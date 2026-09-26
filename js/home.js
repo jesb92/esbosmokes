@@ -4,6 +4,17 @@
   try {
     const data = await loadData();
     const published = data.nades.filter(n => n.published);
+    const totalUtility = data.nades.filter(
+  nade => nade.published !== false
+).length;
+
+const totalUtilityElement = document.querySelector(
+  '[data-total-utility]'
+);
+
+if (totalUtilityElement) {
+  totalUtilityElement.textContent = totalUtility;
+}
     /*document.querySelector('[data-total-nades]').textContent = published.length;
     document.querySelector('[data-total-maps]').textContent = data.maps.length;
     document.querySelector('[data-total-featured]').textContent = published.filter(n => n.featured).length;*/

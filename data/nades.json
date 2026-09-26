@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "anubis-a-escaleras-he",
+      "title": "HE escaleras",
+      "map": "anubis",
+      "type": "he",
+      "team": "CT",
+      "origin": "A",
+      "target": "Escaleras",
+      "difficulty": "fácil",
+      "throw": "Run + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/heleras.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/heleras.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/heleras.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
+      "id": "anubis-mid-aguas-smoke",
+      "title": "Silent Drop",
+      "map": "anubis",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "Mid",
+      "target": "Aguas",
+      "difficulty": "difícil",
+      "throw": "",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/silentdrop.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/silentdrop.mp4",
+      "thumbnail": "",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-26"
+    },
+    {
       "id": "cache-boost-caja-mid-smoke",
       "title": "HE caja mid",
       "map": "cache",

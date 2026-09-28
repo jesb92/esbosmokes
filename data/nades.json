@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "humo-nuke-fuera-secret",
+      "title": "Humo fuera Secret",
+      "map": "nuke",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Fuera",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/nuke/secretfuera.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/nuke/secretfuera.mp4",
+      "thumbnail": "assets/maps/mapas/nuke/secretfuera.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-28"
+    },
+    {
+      "id": "nuke-t-spawn-fuera-smoke",
+      "title": "Humo fuera Rojo",
+      "map": "nuke",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T spawn",
+      "target": "Fuera",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/nuke/rojofuera.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/nuke/rojofuera.mp4",
+      "thumbnail": "assets/maps/mapas/nuke/rojofuera.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-09-28"
+    },
+    {
       "id": "mirage-he-corta-rampa",
       "title": "HE corta rampa desde Jungla",
       "map": "mirage",

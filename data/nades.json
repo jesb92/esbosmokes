@@ -57,6 +57,126 @@
   ],
   "nades": [
     {
+      "id": "inferno-long-default-molotov",
+      "title": "Molo Default desde Larga",
+      "map": "inferno",
+      "type": "molotov",
+      "team": "CT",
+      "origin": "Long",
+      "target": "Default",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/molo_default.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/molo_default.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/molo_default.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-10-30"
+    },
+    {
+      "id": "inferno-long-ninja-molotov",
+      "title": "Molo Ninja desde Larga",
+      "map": "inferno",
+      "type": "molotov",
+      "team": "CT",
+      "origin": "Long",
+      "target": "Ninja",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/molo_ninja.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/molo_ninja.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/molo_ninja.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-10-30"
+    },
+    {
+      "id": "mirage-mid-doors-mid-flash",
+      "title": "Pop Flash Mid",
+      "map": "mirage",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Mid Doors",
+      "target": "Mid",
+      "difficulty": "fácil",
+      "throw": "Quieto",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/pop_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/pop_mid.mp4",
+      "thumbnail": "assets/maps/mapas/d2/pop_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-10-30"
+    },
+    {
+      "id": "mirage-mid-mid-flash",
+      "title": "Pop-Mid",
+      "map": "mirage",
+      "type": "flash",
+      "team": "T",
+      "origin": "Mid",
+      "target": "Mid",
+      "difficulty": "fácil",
+      "throw": "Quieto",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/mirage/mid_flash.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/mirage/mid_flash.mp4",
+      "thumbnail": "assets/maps/mapas/mirage/mid_flash.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-10-30"
+    },
+    {
       "id": "humo-nuke-fuera-secret",
       "title": "Humo fuera Secret",
       "map": "nuke",

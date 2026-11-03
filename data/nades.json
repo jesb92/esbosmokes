@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "inferno-ramp-banana-flash",
+      "title": "Pop Banana",
+      "map": "inferno",
+      "type": "flash",
+      "team": "T",
+      "origin": "Ramp",
+      "target": "Banana",
+      "difficulty": "fácil",
+      "throw": "Quieto",
+      "movement": "",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/pop_banana.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/pop_banana.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/pop_banana.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-03"
+    },
+    {
+      "id": "inferno-ct-spawn-banana-smoke",
+      "title": "Smoke CT Spawn a Banana",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "CT Spawn",
+      "target": "Banana",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/ct_banana.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/ct_banana.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/ct_banana.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-03"
+    },
+    {
       "id": "anubis-conn-aguas-flash",
       "title": "Pop Flash Agua",
       "map": "anubis",

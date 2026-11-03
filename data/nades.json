@@ -57,6 +57,66 @@
   ],
   "nades": [
     {
+      "id": "anubis-conn-aguas-flash",
+      "title": "Pop Flash Agua",
+      "map": "anubis",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Conn",
+      "target": "Aguas",
+      "difficulty": "fácil",
+      "throw": "Right Click + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/pop_agua.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/pop_agua.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/pop_agua.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-03"
+    },
+    {
+      "id": "inferno-under-balcon-smoke",
+      "title": "Smoke Balcon A - Under",
+      "map": "inferno",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Under",
+      "target": "Balcon",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "media",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/inferno/under_balcon.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/inferno/under_balcon.mp4",
+      "thumbnail": "assets/maps/mapas/inferno/under_balcon.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-03"
+    },
+    {
       "id": "inferno-long-default-molotov",
       "title": "Molo Default desde Larga",
       "map": "inferno",

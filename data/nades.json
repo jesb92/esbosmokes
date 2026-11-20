@@ -57,6 +57,126 @@
   ],
   "nades": [
     {
+      "id": "dust2-t-spawn-puerta-y-vetana-smoke",
+      "title": "Humos Rush B",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Puerta y Vetana",
+      "difficulty": "difícil",
+      "throw": "W + Click izquierdo + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/humos_rushb.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/humos_rushb.mp4",
+      "thumbnail": "assets/maps/mapas/d2/humos_rushb.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "dust2-oscuro-b-flash",
+      "title": "Pop Flash - B",
+      "map": "dust2",
+      "type": "flash",
+      "team": "T",
+      "origin": "Oscuro",
+      "target": "B",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/pop_b.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/pop_b.mp4",
+      "thumbnail": "assets/videos/maps/d2/pop_b.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "mirage-camara-entrada-a-molotov",
+      "title": "Molo Antirush - A",
+      "map": "mirage",
+      "type": "molotov",
+      "team": "CT",
+      "origin": "Camara",
+      "target": "Entrada A",
+      "difficulty": "difícil",
+      "throw": "Double click + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/molo_antirush.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/molo_antirush.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/molo_antirush.mp4",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "ancient-cueva-b-flash",
+      "title": "Pop Cueva - B",
+      "map": "ancient",
+      "type": "flash",
+      "team": "T",
+      "origin": "Cueva",
+      "target": "B",
+      "difficulty": "fácil",
+      "throw": "Click Izquierdo",
+      "movement": "Quieto",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/pop_cueva.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/pop_cueva.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/pop_cueva.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
       "id": "inferno-ramp-banana-flash",
       "title": "Pop Banana",
       "map": "inferno",

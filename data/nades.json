@@ -107,7 +107,7 @@
         }
       ],
       "videoUrl": "assets/videos/maps/d2/pop_b.mp4",
-      "thumbnail": "assets/videos/maps/d2/pop_b.jpg",
+      "thumbnail": "assets/maps/mapas/d2/pop_b.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],
@@ -119,7 +119,7 @@
     {
       "id": "mirage-camara-entrada-a-molotov",
       "title": "Molo Antirush - A",
-      "map": "mirage",
+      "map": "anubis",
       "type": "molotov",
       "team": "CT",
       "origin": "Camara",

@@ -57,6 +57,246 @@
   ],
   "nades": [
     {
+      "id": "dust2-coche-spawn-short-smoke",
+      "title": "Smoke short desde mid",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "Coche Spawn",
+      "target": "Short",
+      "difficulty": "fácil",
+      "throw": "Right + Left Click",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/smoke_short_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/smoke_short_mid.mp4",
+      "thumbnail": "assets/maps/mapas/d2/smoke_short_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "dust2-mid-long-smoke",
+      "title": "Smoke Long desde Mid",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Mid",
+      "target": "Long",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/smokelong_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/smokelong_mid.mp4",
+      "thumbnail": "assets/maps/mapas/d2/smokelong_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "ancient-pilar-cueva-flash",
+      "title": "Pop Flash - Cave",
+      "map": "ancient",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Pilar",
+      "target": "Cueva",
+      "difficulty": "difícil",
+      "throw": "Right Click",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/pop_flash_cave.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/pop_flash_cave.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/pop_flash_cave.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "ancient-site-a-mid-flash",
+      "title": "Pop Flash - Mid",
+      "map": "ancient",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Site A",
+      "target": "Mid",
+      "difficulty": "fácil",
+      "throw": "Right Click",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/anubis/pop_flash_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/anubis/pop_flash_mid.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/pop_flash_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "dust2-coche-spawn-mid-flash",
+      "title": "Pop Flash - Mid",
+      "map": "dust2",
+      "type": "flash",
+      "team": "CT",
+      "origin": "Coche Spawn",
+      "target": "Mid",
+      "difficulty": "fácil",
+      "throw": "Right Click",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/pop_flash_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/pop_flash_mid.mp4",
+      "thumbnail": "assets/maps/mapas/d2/pop_flash_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "ancient-t-spawn-cueva-smoke",
+      "title": "Smoke Gap Cueva - Mid",
+      "map": "ancient",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Cueva",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/ancient/gap_cueva.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/ancient/gap_cueva.mp4",
+      "thumbnail": "assets/maps/mapas/ancient/gap_cueva.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "cache-coche-sacos-molotov",
+      "title": "Molo sacos",
+      "map": "cache",
+      "type": "molotov",
+      "team": "T",
+      "origin": "Coche",
+      "target": "Sacos",
+      "difficulty": "media",
+      "throw": "D + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/cache/molo_sacos.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/cache/molo_sacos.mp4",
+      "thumbnail": "assets/maps/mapas/cache/molo_sacos.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "dust2-mid-doors-mid-doors-smoke",
+      "title": "Smoke mid con Gap",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "CT",
+      "origin": "Mid Doors",
+      "target": "Mid Doors",
+      "difficulty": "fácil",
+      "throw": "Left and Right click",
+      "movement": "",
+      "precision": "baja",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/gap_smoke_mid.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/gap_smoke_mid.mp4",
+      "thumbnail": "assets/maps/mapas/d2/gap_smoke_mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-20"
+    },
+    {
       "id": "dust2-t-spawn-puerta-y-vetana-smoke",
       "title": "Humos Rush B",
       "map": "dust2",
@@ -672,12 +912,12 @@
       "videos": [
         {
           "title": "Vídeo 1",
-          "url": "assets/videos/maps/anubis/silentdrop.mp4",
+          "url": "assets/videos/maps/anubis/silent_drop2.mp4",
           "image": ""
         }
       ],
-      "videoUrl": "assets/videos/maps/anubis/silentdrop.mp4",
-      "thumbnail": "",
+      "videoUrl": "assets/videos/maps/anubis/silent_drop2.mp4",
+      "thumbnail": "assets/maps/mapas/anubis/silent_drop2.jpg",
       "referenceImage": "",
       "description": "",
       "steps": [],

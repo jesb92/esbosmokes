@@ -59,6 +59,12 @@
       "name": "Cobblestone",
       "image": "assets/maps/cbble.png",
       "description": ""
+    },
+    {
+      "slug": "train",
+      "name": "Train",
+      "image": "assets/maps/traing.png",
+      "description": ""
     }
   ],
   "nades": [

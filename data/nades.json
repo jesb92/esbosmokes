@@ -63,7 +63,7 @@
     {
       "slug": "train",
       "name": "Train",
-      "image": "assets/maps/traing.png",
+      "image": "assets/maps/train.png",
       "description": ""
     }
   ],
@@ -254,7 +254,7 @@
     {
       "id": "ancient-site-a-mid-flash",
       "title": "Pop Flash - Mid",
-      "map": "ancient",
+      "map": "anubis",
       "type": "flash",
       "team": "CT",
       "origin": "Site A",

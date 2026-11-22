@@ -71,7 +71,7 @@
     {
       "id": "mirage-coche-spawn-long-a-smoke",
       "title": "Smokes Long and A - 1 Posi",
-      "map": "mirage",
+      "map": "dust2",
       "type": "smoke",
       "team": "T",
       "origin": "Coche Spawn",
@@ -104,7 +104,7 @@
     {
       "id": "mirage-t-spawn-mid-smoke",
       "title": "Smoke CT desde B",
-      "map": "mirage",
+      "map": "dust2",
       "type": "smoke",
       "team": "T",
       "origin": "T Spawn",

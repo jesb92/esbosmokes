@@ -63,11 +63,104 @@
     {
       "slug": "train",
       "name": "Train",
-      "image": "assets/maps/train.png",
+      "image": "assets/maps/traing.png",
       "description": ""
     }
   ],
   "nades": [
+    {
+      "id": "mirage-coche-spawn-long-a-smoke",
+      "title": "Smokes Long and A - 1 Posi",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Coche Spawn",
+      "target": "Long + A",
+      "difficulty": "difícil",
+      "throw": "",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/long_and_a.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/long_and_a.mp4",
+      "thumbnail": "assets/maps/mapas/d2/long_and_a.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [
+        "1 - w + right click + jumpthrow",
+        "2 - jumpthrow"
+      ],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "mirage-t-spawn-mid-smoke",
+      "title": "Smoke CT desde B",
+      "map": "mirage",
+      "type": "smoke",
+      "team": "T",
+      "origin": "T Spawn",
+      "target": "Mid",
+      "difficulty": "fácil",
+      "throw": "Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/smoke_ct_b.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/smoke_ct_b.mp4",
+      "thumbnail": "assets/maps/mapas/d2/mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "dust2-coche-spawn-mid-smoke",
+      "title": "Fake Mid A",
+      "map": "dust2",
+      "type": "smoke",
+      "team": "T",
+      "origin": "Coche Spawn",
+      "target": "Mid",
+      "difficulty": "difícil",
+      "throw": "W+ Right Click + Jumpthrow",
+      "movement": "",
+      "precision": "alta",
+      "setpos": "",
+      "videos": [
+        {
+          "title": "Vídeo 1",
+          "url": "assets/videos/maps/d2/fake_mid_a.mp4",
+          "image": ""
+        }
+      ],
+      "videoUrl": "assets/videos/maps/d2/fake_mid_a.mp4",
+      "thumbnail": "assets/maps/mapas/d2/mid.jpg",
+      "referenceImage": "",
+      "description": "",
+      "steps": [],
+      "tags": [],
+      "featured": false,
+      "published": true,
+      "createdAt": "2026-11-22"
+    },
     {
       "id": "dust2-coche-spawn-short-smoke",
       "title": "Smoke short desde mid",
